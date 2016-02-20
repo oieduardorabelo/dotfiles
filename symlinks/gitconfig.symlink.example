@@ -48,3 +48,5 @@
   submoduleSummary = true
 [diff]
   submodule = log
+[commit]
+  template = ~/.dotfiles/templates/git-commit.txt

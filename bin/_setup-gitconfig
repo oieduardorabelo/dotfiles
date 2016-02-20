@@ -25,31 +25,42 @@ fail() {
   exit
 }
 
+generate_gitconfig() {
+  info 'setup gitconfig'
+
+  git_credential='cache'
+
+  if [ "$(uname -s)" == "Darwin" ]; then
+    git_credential='osxkeychain'
+  fi
+
+  user ' - What is your github author name?'
+  read -e git_authorname
+
+  user ' - What is your github author email?'
+  read -e git_authoremail
+
+  sed \
+    -e "s/AUTHORNAME/$git_authorname/g" \
+    -e "s/AUTHOREMAIL/$git_authoremail/g" \
+    -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
+    "$DOTFILES_ROOT/symlinks/gitconfig.symlink.example" > "$DOTFILES_ROOT/symlinks/gitconfig.symlink"
+
+  success "$DOTFILES_ROOT/symlinks/gitconfig.symlink created!"
+}
+
 setup_gitconfig() {
-  if ! [ -f "$DOTFILES_ROOT/symlinks/gitconfig.symlink" ]; then
-    info 'setup gitconfig'
+  local gitconfig="$DOTFILES_ROOT/symlinks/gitconfig.symlink"
+  if [ -f "$gitconfig" ]; then
+    user "File already exists: $gitconfig, would like to re-generate .gitconfig.symlink? [y/n] "
+    read -n 1 action
 
-    git_credential='cache'
-
-    if [ "$(uname -s)" == "Darwin" ]; then
-      git_credential='osxkeychain'
+    if [ "$action" = "y" ]; then
+      echo ''
+      generate_gitconfig
     fi
-
-    user ' - What is your github author name?'
-    read -e git_authorname
-
-    user ' - What is your github author email?'
-    read -e git_authoremail
-
-    sed \
-      -e "s/AUTHORNAME/$git_authorname/g" \
-      -e "s/AUTHOREMAIL/$git_authoremail/g" \
-      -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
-      "$DOTFILES_ROOT/symlinks/gitconfig.symlink.example" > "$DOTFILES_ROOT/symlinks/gitconfig.symlink"
-
-    success "$DOTFILES_ROOT/symlinks/gitconfig.symlink created!"
   else
-    success "$DOTFILES_ROOT/symlinks/gitconfig.symlink already created!"
+    generate_gitconfig
   fi
 }
 
