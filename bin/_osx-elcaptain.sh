@@ -60,11 +60,17 @@ _osxDefaults() {
   defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
 }
 
+info() {
+  printf "  [ \033[00;34m..\033[0m ] %s " "$1"
+}
+
 success() {
   printf "\r\033[2K  [ \033[00;32mOK\033[0m ] %s\n" "$1"
   echo ''
 }
 
+echo ''
+info ' Applying OSX El Captain defaults...'
 echo ''
 _osxDefaults
 success ' OSX El Captain defaults applied!'
