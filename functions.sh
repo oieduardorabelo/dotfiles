@@ -25,7 +25,9 @@ npm-do() {
 
 # Ruby
 gembump() {
-  echo "Updating Gems for: $(ruby -e 'print RUBY_VERSION')..."
+  echo "Running gem --system for: $(ruby -e 'print RUBY_VERSION')..."
+  gem update --system
+  echo "Updating..."
   gem update
   echo "Cleaning your mess..."
   gem cleanup
