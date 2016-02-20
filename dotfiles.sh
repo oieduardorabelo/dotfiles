@@ -1,6 +1,7 @@
 # exports
 export EDITOR='subl'
 export PATH="$HOME/.dotfiles/bin:$PATH"
+export DOTFILES_ROOT="$HOME/.dotfiles"
 
 # bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -23,6 +24,6 @@ if test "$(which rbenv)"; then
   eval "$(rbenv init -)"
 fi
 
-. "$(dirname "${BASH_SOURCE[0]}" )/aliases.sh"
-. "$(dirname "${BASH_SOURCE[0]}" )/functions.sh"
-. "$(dirname "${BASH_SOURCE[0]}" )/ps1.sh"
+. "$DOTFILES_ROOT/aliases.sh"
+. "$DOTFILES_ROOT/functions.sh"
+. "$DOTFILES_ROOT/ps1.sh"

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+DOTFILES_ROOT="$HOME/.dotfiles"
+
+. "$DOTFILES_ROOT/bin/_common-dependencies"
+. "$DOTFILES_ROOT/bin/_setup-gitconfig"
+. "$DOTFILES_ROOT/bin/_copy-symlinks"

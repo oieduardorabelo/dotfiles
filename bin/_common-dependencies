@@ -49,16 +49,7 @@ if test "$(which brew)"; then
   echo -e "
     Common dependencies:
 
-    ffmpeg
-    gifsicle
-    git
-    bash-completion
-    openssl
-    rbenv
-    ruby-build
-    coreutils
-    git
-    nvm
+    ffmpeg, gifsicle, git, bash-completion, openssl, rbenv, ruby-build, coreutils, git, nvm
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -e answer

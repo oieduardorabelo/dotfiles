@@ -26,7 +26,7 @@ fail() {
 }
 
 setup_gitconfig() {
-  if ! [ -f git/gitconfig.symlink ]; then
+  if ! [ -f "$DOTFILES_ROOT/symlinks/gitconfig.symlink" ]; then
     info 'setup gitconfig'
 
     git_credential='cache'
@@ -49,7 +49,7 @@ setup_gitconfig() {
 
     success "$DOTFILES_ROOT/symlinks/gitconfig.symlink created!"
   else
-    success "$DOTFILES_ROOT/symlinks/gitconfig.symlink created!"
+    success "$DOTFILES_ROOT/symlinks/gitconfig.symlink already created!"
   fi
 }
 
