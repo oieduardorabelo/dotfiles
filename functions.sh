@@ -42,6 +42,7 @@ brewbump() {
   brew upgrade --all
   echo -e "\nCleaning your mess...\n"
   brew cleanup
+  brew prune
   echo -e "\nDone.\n"
 }
 
