@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# copying .<filename> to $HOME
+
+ROOT="$HOME"
+DOTFILES_ROOT="$ROOT/.dotfiles"
+
+echo ''
+
+info() {
+  printf "  [ \033[00;34m..\033[0m ] $1"
+}
+
+user() {
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+}
+
+success() {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+  echo ''
+}
+
+fail() {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
+
+link_file () {
+  local src=$1
+  local dst=$2
+  local overwrite=
+  local skip=
+
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
+    user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
+    [s]kip, [o]verwrite? "
+    read -n 1 action
+
+    case "$action" in
+      "s")
+        skip="$action"
+        ;;
+      "o")
+        overwrite="$action"
+        ;;
+      *)
+        fail "Only \"s\" and \"o\" are supported"
+        exit 1
+    esac
+
+    if [ "$overwrite" == "o" ]; then
+      rm -rf "$dst"
+      success "removed $dst"
+    fi
+
+    if [ "$skip" == "s" ]; then
+      success "skipped $src"
+    fi
+  fi
+
+  if [ "$skip" != "s" ]; then
+    ln -s "$1" "$2"
+    success "linked $1 to $2"
+  fi
+}
+
+search_symlinks () {
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink'); do
+    dst="$HOME/.$(basename "${src%.*}")"
+    link_file "$src" "$dst"
+  done
+}
+
+search_symlinks

@@ -1,0 +1,78 @@
+#!/bin/bash
+#
+# Homebrew
+#
+# This installs some of the common dependencies needed (or at least desired)
+# using Homebrew.
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
+
+uninstallHomebrew() {
+  # Uninstall Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+}
+
+installHomebrew() {
+  # Install Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+# Check for Homebrew
+if test ! "$(which brew)"; then
+  printf "  Would like to install Homebrew? [y/n] "
+  read -e answer
+
+  if [ "$answer" = "y" ]; then
+    echo "  Installing Homebrew for you..."
+    installHomebrew
+  fi
+fi
+
+if test "$(which brew)"; then
+  printf "  Would like to re-install Homebrew? [y/n] "
+  read -e answer
+
+  if [ "$answer" = "y" ]; then
+    uninstallHomebrew
+    installHomebrew
+  fi
+fi
+
+printf "  \nRunning 'brew update'...\n\n"
+brew update
+printf "  \nRunning 'brew upgrade --all'...\n\n"
+brew upgrade --all
+printf "  \nRunning 'brew cleanup'...\n\n"
+brew cleanup
+
+# common dependencies
+if test "$(which brew)"; then
+  echo -e "
+    Common dependencies:
+
+    ffmpeg
+    gifsicle
+    git
+    bash-completion
+    openssl
+    rbenv
+    ruby-build
+    coreutils
+    git
+    nvm
+  "
+  printf "  Would like to install common dependencies? [y/n] "
+  read -e answer
+
+  if [ "$answer" = "y" ]; then
+    brew install ffmpeg \
+      gifsicle \
+      git \
+      bash-completion \
+      openssl \
+      rbenv \
+      ruby-build \
+      coreutils \
+      git \
+      nvm || true
+  fi
+fi

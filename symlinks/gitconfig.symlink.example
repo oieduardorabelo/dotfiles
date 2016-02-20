@@ -1,0 +1,50 @@
+#
+# Sample gitconfig
+#
+
+[credential]
+  helper = GIT_CREDENTIAL_HELPER
+[user]
+  name = AUTHORNAME
+  email = AUTHOREMAIL
+[core]
+  autocrlf          = input
+  compression       = -1
+  editor            = subl -w
+  excludesfile      = ~/.gitignore
+  precomposeunicode = true
+  whitespace        = trailing-space,space-before-tab
+[alias]
+  br                  = branch
+  cl                  = clone
+  co                  = checkout
+  ps                  = push
+  st                  = status -sb
+  rmt                 = remote
+  subinit             = submodule update --init --recursive
+  subup               = submodule update --remote --merge
+  count               = !git shortlog -sn
+  copy-branch-name    = !git rev-parse --abbrev-ref HEAD | pbcopy
+  changed             = show --pretty=\"format:\" --name-only
+[color]
+  diff    = auto
+  status  = auto
+  branch  = auto
+  ui      = true
+[apply]
+  whitespace = nowarn
+[help]
+  autocorrect = 1
+[grep]
+  extendRegexp = true
+  lineNumber   = true
+[merge]
+  ff = false
+[push]
+  default = simple
+[pull]
+  rebase = true
+[status]
+  submoduleSummary = true
+[diff]
+  submodule = log
