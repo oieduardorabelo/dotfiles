@@ -53,7 +53,7 @@ setup_gitconfig() {
   local gitconfig="$DOTFILES_ROOT/symlinks/gitconfig.symlink"
   if [ -f "$gitconfig" ]; then
     user "File already exists: $gitconfig, would like to re-generate .gitconfig.symlink? [y/n] "
-    read -r -e 1 action
+    read -r -e action
 
     if [ "$action" = "y" ]; then
       echo ''

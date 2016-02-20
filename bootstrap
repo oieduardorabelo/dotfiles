@@ -12,4 +12,4 @@ DOTFILES_ROOT="$HOME/.dotfiles"
 . "$DOTFILES_ROOT/bin/_copy-symlinks"
 
 # shellcheck disable=SC1090,SC1091
-. "$DOTFILES_ROOT/bin/_oxs-elcaptain"
+. "$DOTFILES_ROOT/bin/_osx-elcaptain"

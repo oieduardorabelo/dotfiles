@@ -44,15 +44,11 @@ link_file() {
     read -r -n 1 action
 
     case "$action" in
-      "s")
-        skip="$action"
-        ;;
       "o")
-        overwrite="$action"
+        overwrite="o"
         ;;
       *)
-        fail "Only \"s\" and \"o\" are supported"
-        exit 1
+        skip="s"
     esac
 
     if [ "$overwrite" == "o" ]; then
@@ -67,7 +63,7 @@ link_file() {
 
   if [ "$skip" != "s" ]; then
     ln -s "$src" "$dst"
-    success "linked $1 to $2"
+    success "linked $src to $dst"
   fi
 }
 
