@@ -1,0 +1,11 @@
+#!/bin/bash
+# Skip (or ignore) your local file from Git History.
+#
+# --skip-worktree is useful when you instruct git not to touch a specific file
+# ever because developers should change it. For example, if the main repository
+# upstream hosts some production-ready configuration files and you don’t want to
+# accidentally commit changes to those files
+#
+# http://stackoverflow.com/questions/13630849/git-difference-between-assume-unchanged-and-skip-worktree/13631525#13631525
+#
+git update-index --skip-worktree "$1"

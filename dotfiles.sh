@@ -18,14 +18,15 @@ if grc &>/dev/null && ! brew &>/dev/null; then
 fi
 
 # nvm
-if test "$(which nvm)"; then
-  export NVM_DIR=~/.nvm
+if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
   # shellcheck disable=SC1090,SC1091
   . "$(brew --prefix nvm)/nvm.sh"
 fi
 
 # rbenv
 if test "$(which rbenv)"; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 

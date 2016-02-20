@@ -1,22 +1,28 @@
 #!/bin/bash
 
+# vim
+alias svim='sudo vim'
+
 # npm
 alias npi='npm install'
 alias npl='npm ls --depth=0'
 alias npo='npm outdated'
-alias npt='npm init -y'
 alias npr='npm run'
+alias npt='npm init -y'
 
-# SSH
+# ssh
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '\n\r\033[2K  [ \033[00;32mPublic key copied to pasteboard.\033[0m ] id_rsa.pub\n\n'"
 
-# Misc
+# misc
+alias grep="grep --color=auto"
+alias less="less -r"
+alias dotfilesconfig='e ~/.dotfiles'
 alias bashconfig='e ~/.bash_profile'
 alias gitconfig='e ~/.gitconfig'
 alias hostsfile='e /etc/hosts'
-alias cafe!='caffeinate'
+alias cafe!='echo wake up... && caffeinate'
 
-# Navigation
+# navigation
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -26,11 +32,11 @@ alias p="cd ~/Projects"
 alias dl="cd ~/Downloads"
 alias k="clear"
 
-# Put mac to sleep via terminal
+# put mac to sleep via terminal
 alias sleepnow="pmset sleepnow"
 
-# GRC overides for ls
-#   Made possible through contributions from generous benefactors like
+# grc overides for ls
+#   made possible through contributions from generous benefactors like
 #   `brew install coreutils`
 if gls &>/dev/null; then
   alias ls="gls -F --color"
@@ -44,7 +50,7 @@ else
   alias la="ls -A --color"
 fi
 
-# Git
+# git
 alias g='git'
 alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -62,7 +68,7 @@ alias gs='git status -sb'
 alias gcb='git copy-branch-name'
 alias gm='git merge'
 
-# Add git completion to aliases
+# add git completion to aliases
 __git_complete g __git_main
 __git_complete gb _git_branch
 __git_complete gco _git_checkout

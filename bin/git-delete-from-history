@@ -1,0 +1,7 @@
+#!/bin/bash
+# Delete the file from all Git history, revisions and tags.
+# YOUR TEAM NEED TO DO A 'pull --rebase'
+#
+git filter-branch --force --index-filter \
+"git rm --cached --ignore-unmatch $1" \
+--prune-empty --tag-name-filter cat -- --all

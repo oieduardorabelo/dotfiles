@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# find a running proccess
+check() {
+  pgrep -f "$1"
+}
+
+# checks if the port is in use
+port() {
+  lsof -n -i4TCP:"$1"
+}
+
 # Reloading .bash_profile
 reload() {
   echo -e "\nReloading bash...\n"
