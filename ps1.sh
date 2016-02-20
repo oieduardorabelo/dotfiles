@@ -5,7 +5,7 @@ ps1() {
   local purple='\[\e[1;36m\]'
   local reset='\[\e[0m\]'
   local git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-  export PS1="$lightBlue\u at $yellow\h in $purple\w$reset $git_branch"
+  export PS1="$lightBlue\u$reset at $yellow\h$reset in $purple\w$reset $git_branch"
 }
 
 ps1
