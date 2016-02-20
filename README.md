@@ -1,4 +1,4 @@
-# eduardo's dotfiles
+# eduardo's dotfiles [![Build Status](https://travis-ci.org/oieduardorabelo/dotfiles.svg?branch=master)](https://travis-ci.org/oieduardorabelo/dotfiles)
 
 ## dotfiles
 
