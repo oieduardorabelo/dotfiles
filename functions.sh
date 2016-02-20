@@ -1,13 +1,16 @@
+#!/bin/bash
+
 # Reloading .bash_profile
 reload() {
   echo -e "\nReloading bash...\n"
-  . ~/.bash_profile
+  # shellcheck disable=SC1090,SC1091
+  . "$HOME/.bash_profile"
   clear
 }
 
 # npm bash local packages bin
 npm-do() {
-  (PATH=$(npm bin):$PATH; eval $@;)
+  (PATH=$(npm bin):$PATH; eval "$@";)
 }
 
 # Ruby

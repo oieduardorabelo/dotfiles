@@ -7,20 +7,20 @@ DOTFILES_ROOT="$HOME/.dotfiles"
 echo ''
 
 info() {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "  [ \033[00;34m..\033[0m ] %s " "$1"
 }
 
 user() {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+  printf "\r  [ \033[0;33m?\033[0m ] %s " "$1"
 }
 
 success() {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] %s\n" "$1"
   echo ''
 }
 
 fail() {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] %s\n" "$1"
   echo ''
   exit
 }
@@ -35,10 +35,10 @@ generate_gitconfig() {
   fi
 
   user ' - What is your github author name?'
-  read -e git_authorname
+  read -r -e git_authorname
 
   user ' - What is your github author email?'
-  read -e git_authoremail
+  read -r -e git_authoremail
 
   sed \
     -e "s/AUTHORNAME/$git_authorname/g" \
@@ -53,7 +53,7 @@ setup_gitconfig() {
   local gitconfig="$DOTFILES_ROOT/symlinks/gitconfig.symlink"
   if [ -f "$gitconfig" ]; then
     user "File already exists: $gitconfig, would like to re-generate .gitconfig.symlink? [y/n] "
-    read -n 1 action
+    read -r -e 1 action
 
     if [ "$action" = "y" ]; then
       echo ''

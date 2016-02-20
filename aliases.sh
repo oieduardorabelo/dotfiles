@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # npm
 alias npi='npm install'
 alias npl='npm ls --depth=0'

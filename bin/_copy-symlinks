@@ -8,35 +8,40 @@ DOTFILES_ROOT="$ROOT/.dotfiles"
 echo ''
 
 info() {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "  [ \033[00;34m..\033[0m ] %s " "$1"
 }
+export -f info
 
 user() {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+  printf "\r  [ \033[0;33m?\033[0m ] %s " "$1"
 }
+export -f user
 
 success() {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] %s\n" "$1"
   echo ''
 }
+export -f success
 
 fail() {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] %s\n" "$1"
   echo ''
   exit
 }
+export -f fail
 
+link_file() {
+  local src
+  local dst
+  local overwrite
+  local skip
 
-link_file () {
-  local src=$1
-  local dst=$2
-  local overwrite=
-  local skip=
+  src="$1"
+  dst="$HOME/.$(basename "${src%.*}")"
 
-  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
-    user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
-    [s]kip, [o]verwrite? "
-    read -n 1 action
+  if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]; then
+    user "File already exists: $dst ($(basename "$src")), [s]kip, [o]verwrite? "
+    read -r -n 1 action
 
     case "$action" in
       "s")
@@ -61,16 +66,16 @@ link_file () {
   fi
 
   if [ "$skip" != "s" ]; then
-    ln -s "$1" "$2"
+    ln -s "$src" "$dst"
     success "linked $1 to $2"
   fi
 }
 
-search_symlinks () {
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink'); do
-    dst="$HOME/.$(basename "${src%.*}")"
-    link_file "$src" "$dst"
-  done
+export -f link_file
+
+search_symlinks() {
+  find "$DOTFILES_ROOT" -maxdepth 2 -name \*.symlink \
+  -exec bash -c 'link_file "$1"' _ {} \;
 }
 
 search_symlinks

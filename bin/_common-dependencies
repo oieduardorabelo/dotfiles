@@ -19,7 +19,7 @@ installHomebrew() {
 # Check for Homebrew
 if test ! "$(which brew)"; then
   printf "  Would like to install Homebrew? [y/n] "
-  read -e answer
+  read -r -e answer
 
   if [ "$answer" = "y" ]; then
     echo "  Installing Homebrew for you..."
@@ -29,7 +29,7 @@ fi
 
 if test "$(which brew)"; then
   printf "  Would like to re-install Homebrew? [y/n] "
-  read -e answer
+  read -r -e answer
 
   if [ "$answer" = "y" ]; then
     uninstallHomebrew
@@ -52,7 +52,7 @@ if test "$(which brew)"; then
     ffmpeg, gifsicle, git, bash-completion, openssl, rbenv, ruby-build, coreutils, git, nvm
   "
   printf "  Would like to install common dependencies? [y/n] "
-  read -e answer
+  read -r -e answer
 
   if [ "$answer" = "y" ]; then
     brew install ffmpeg \
