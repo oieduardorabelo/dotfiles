@@ -1,4 +1,6 @@
 "*":
+  "atom-beautify":
+    _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
   core:
     autoHideMenuBar: true
     disabledPackages: [

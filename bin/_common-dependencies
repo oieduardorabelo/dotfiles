@@ -89,6 +89,7 @@ if [ "$answer" = "y" ]; then
       atom-wrap-in-tag \
       color-picker \
       editorconfig \
+      emmet \
       file-icons \
       language-diff \
       linter \
