@@ -94,6 +94,7 @@ if [ "$answer" = "y" ]; then
       linter \
       linter-eslint \
       minimap \
+      project-manager \
       sort-lines
 
     apm remove \
