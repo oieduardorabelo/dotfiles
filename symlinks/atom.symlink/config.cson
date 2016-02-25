@@ -1,0 +1,21 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+    ]
+    hideGitIgnoredFiles: true
+    projectHome: "~/Projects/"
+  editor:
+    fontFamily: "Hack"
+    fontSize: 16
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+  linter: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
