@@ -6,11 +6,26 @@
       "exception-reporting"
     ]
     hideGitIgnoredFiles: true
+    ignoredNames: [
+      "_ci/*"
+      "_site/*"
+      "aas/*"
+      "build/*"
+      "demo/*"
+      "dist/*"
+      "docker/*"
+      "gradle/*"
+      "node_binaries/*"
+      "node_modules/*"
+      "node_shrinkwrap/*"
+      "war_resources/*"
+    ]
     projectHome: "~/Projects/"
   editor:
     fontFamily: "Hack"
-    fontSize: 16
+    fontSize: 18
     invisibles: {}
+    lineHeight: 2
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true

@@ -60,7 +60,7 @@ setup_gitconfig() {
       generate_gitconfig
     fi
   else
-    generate_gitconfig
+    info "File $gitconfig, skipped"
   fi
 }
 

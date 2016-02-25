@@ -6,6 +6,11 @@
 # using Homebrew.
 [[ "$(uname -s)" != "Darwin" ]] && exit 0
 
+fail() {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] %s\n" "$1"
+  echo ''
+}
+
 uninstallHomebrew() {
   # Uninstall Homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
@@ -37,12 +42,17 @@ if test "$(which brew)"; then
   fi
 fi
 
-printf "  \nRunning 'brew update'...\n\n"
-brew update
-printf "  \nRunning 'brew upgrade --all'...\n\n"
-brew upgrade --all
-printf "  \nRunning 'brew cleanup'...\n\n"
-brew cleanup
+printf "  Would like to update, upgrade and cleanup Homebrew? [y/n] "
+read -r -e answer
+
+if [ "$answer" = "y" ]; then
+  printf "  \nRunning 'brew update'...\n\n"
+  brew update
+  printf "  \nRunning 'brew upgrade --all'...\n\n"
+  brew upgrade --all
+  printf "  \nRunning 'brew cleanup'...\n\n"
+  brew cleanup
+fi
 
 # common dependencies
 if test "$(which brew)"; then
@@ -65,5 +75,31 @@ if test "$(which brew)"; then
       coreutils \
       git \
       nvm || true
+  fi
+fi
+
+
+printf "  Would like to install Atom packages? [y/n] "
+read -r -e answer
+
+if [ "$answer" = "y" ]; then
+  if test "$(which apm)"; then
+    apm install \
+      atom-beautify \
+      atom-wrap-in-tag \
+      color-picker \
+      editorconfig \
+      file-icons \
+      language-diff \
+      linter \
+      linter-eslint \
+      minimap \
+      sort-lines
+
+    apm remove \
+      metrics \
+      exception-reporting
+  else
+    fail "Atom is not installed, skipped"
   fi
 fi
