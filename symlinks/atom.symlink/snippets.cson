@@ -1,3 +1,7 @@
+'source.scss':
+  '@include':
+    'prefix': 'incl'
+    'body': '@include ${1:Foo}'
 '.source.js':
   'console.log':
     'prefix': 'cl'
