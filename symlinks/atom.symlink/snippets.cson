@@ -1,0 +1,35 @@
+'.source.js':
+  'console.log':
+    'prefix': 'cl'
+    'body': 'console.log(${1:\'foo\'})'
+  'es6 - import':
+    'prefix': 'import'
+    'body': 'import ${1:React} from \'${2:react}\''
+  'es6 - export':
+    'prefix': 'export'
+    'body': 'export ${1:default} ${2:Foo}'
+  'react - class component':
+    'prefix': 'r-class'
+    'body': """
+      class ${1:Foo} extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {}
+        }
+
+        render() {
+          return (
+            ${3}
+          )
+        }
+      }
+    """
+  'react - stateless component':
+    'prefix': 'r-stc'
+    'body': """
+      const ${1:foo} = (props, context) => {
+        return (
+          ${2}
+        )
+      }
+    """

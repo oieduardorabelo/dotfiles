@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # exports
-export EDITOR='subl'
+if [[ ! "$EDITOR" ]]; then
+  export EDITOR='subl'
+fi
 export PATH="$HOME/.dotfiles/bin:$PATH"
 export DOTFILES_ROOT="$HOME/.dotfiles"
 

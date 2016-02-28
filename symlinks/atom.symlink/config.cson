@@ -31,7 +31,12 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+  "language-babel":
+    autoIndentJSX: true
   linter: {}
+  minimap:
+    plugins:
+      "highlight-selected": true
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:

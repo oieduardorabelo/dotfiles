@@ -84,23 +84,32 @@ read -r -e answer
 
 if [ "$answer" = "y" ]; then
   if test "$(which apm)"; then
-    apm install \
+    apm install advanced-open-file \
+      atom-alignment \
       atom-beautify \
       atom-wrap-in-tag \
       color-picker \
       editorconfig \
       emmet \
       file-icons \
+      font-viewer \
+      git-plus \
+      highlight-selected \
+      language-babel \
       language-diff \
       linter \
       linter-eslint \
       minimap \
+      minimap-highlight-selected \
       project-manager \
-      sort-lines
+      sort-lines \
+      svg-preview
 
     apm remove \
-      metrics \
-      exception-reporting
+      exception-reporting \
+      language-javascript \
+      language-json \
+      metrics
   else
     fail "Atom is not installed, skipped"
   fi
