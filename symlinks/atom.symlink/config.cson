@@ -3,11 +3,13 @@
     _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
   core:
     autoHideMenuBar: true
+    automaticallyUpdate: false
     disabledPackages: [
       "metrics"
       "exception-reporting"
     ]
-    hideGitIgnoredFiles: true
+    excludeVcsIgnoredPaths: false
+    hideGitIgnoredFiles: false
     ignoredNames: [
       "_ci/*"
       "_site/*"
