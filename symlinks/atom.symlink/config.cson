@@ -1,6 +1,15 @@
 "*":
+  "atom-alignment":
+    alignBy: [
+      "=>"
+      ":="
+      ":"
+      "="
+      "from"
+    ]
   "atom-beautify":
     _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
+  "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
     automaticallyUpdate: false
@@ -25,9 +34,13 @@
       "war_resources/*"
     ]
     projectHome: "~/Projects/"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
     fontFamily: "Hack"
-    fontSize: 18
+    fontSize: 16
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
@@ -39,7 +52,7 @@
   minimap:
     plugins:
       "highlight-selected": true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+      "highlight-selectedDecorationsZIndex": 0
+  "tree-view": {}
   welcome:
     showOnStartup: false
