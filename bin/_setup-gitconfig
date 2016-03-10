@@ -44,7 +44,7 @@ generate_gitconfig() {
     -e "s/AUTHORNAME/$git_authorname/g" \
     -e "s/AUTHOREMAIL/$git_authoremail/g" \
     -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
-    "$DOTFILES_ROOT/symlinks/gitconfig.symlink.example" > "$DOTFILES_ROOT/symlinks/gitconfig.symlink"
+    "$DOTFILES_ROOT/symlinks/gitconfig.example" > "$DOTFILES_ROOT/symlinks/gitconfig.symlink"
 
   success "$DOTFILES_ROOT/symlinks/gitconfig.symlink created!"
 }
@@ -58,9 +58,11 @@ setup_gitconfig() {
     if [ "$action" = "y" ]; then
       echo ''
       generate_gitconfig
+    else
+      info "File $gitconfig, skipped"
     fi
   else
-    info "File $gitconfig, skipped"
+    generate_gitconfig
   fi
 }
 
