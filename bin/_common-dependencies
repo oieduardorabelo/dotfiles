@@ -87,23 +87,41 @@ if [ "$answer" = "y" ]; then
     apm install advanced-open-file \
       atom-alignment \
       atom-beautify \
+      atom-ternjs \
       atom-wrap-in-tag \
+      auto-update-packages \
+      autocomplete-go \
+      autocomplete-modules \
+      builder-go \
       color-picker \
+      docblockr \
       editorconfig \
       emmet \
+      environment \
       file-icons \
       font-viewer \
       git-plus \
+      go-config \
+      go-get \
+      go-plus \
+      gofmt \
+      gometalinter-linter \
+      gorename \
       highlight-selected \
       language-babel \
       language-diff \
+      language-elm \
       linter \
       linter-eslint \
       minimap \
       minimap-highlight-selected \
+      navigator-godef \
       project-manager \
       sort-lines \
-      svg-preview
+      svg-preview \
+      term3 \
+      tester-go \
+      todo-show
 
     apm remove \
       exception-reporting \
