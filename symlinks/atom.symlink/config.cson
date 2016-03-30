@@ -9,6 +9,8 @@
     ]
   "atom-beautify":
     _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
+  "auto-update-packages": {}
+  "autocomplete-modules": {}
   "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
@@ -34,13 +36,9 @@
       "war_resources/*"
     ]
     projectHome: "~/Projects/"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
   editor:
     fontFamily: "Hack"
-    fontSize: 16
+    fontSize: 18
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
@@ -53,6 +51,8 @@
     plugins:
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+  "sync-settings": {}
+  term3: {}
   "tree-view": {}
   welcome:
     showOnStartup: false
