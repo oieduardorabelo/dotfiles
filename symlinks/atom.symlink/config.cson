@@ -72,8 +72,13 @@
   linter: {}
   minimap:
     plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   "sync-settings": {}
   term3: {}
   "tree-view": {}
