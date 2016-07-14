@@ -4,7 +4,7 @@
 alias svim='sudo vim'
 
 # npm
-alias npi='npm install'
+alias npi='npm install --verbose'
 alias npl='npm ls --depth=0'
 alias npo='npm outdated'
 alias npr='npm run'

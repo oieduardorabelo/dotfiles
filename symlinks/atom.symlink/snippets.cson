@@ -40,3 +40,8 @@
         )
       }
     """
+  'react - dangerouslySetInnerHTML':
+    'prefix': 'r-setdng'
+    'body': """
+    dangerouslySetInnerHTML={{ __html: ${1} }}
+    """

@@ -48,7 +48,6 @@
     ignoredNames: [
       "_ci/*"
       "_site/*"
-      "aas/*"
       "build/*"
       "demo/*"
       "dist/*"

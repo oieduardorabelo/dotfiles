@@ -27,7 +27,7 @@ PURPLEBOLD="\[\033[1;35m\]"
 # CYAN="\[\033[0;36m\]"
 # CYANBOLD="\[\033[1;36m\]"
 WHITE="\[\033[0;37m\]"
-# WHITEBOLD="\[\033[1;37m\]"
+WHITEBOLD="\[\033[1;37m\]"
 RESET='\[\e[0m\]'
 
 v1() {
@@ -38,7 +38,7 @@ v1() {
 
 v2() {
   # PS1
-  export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN\$(node --version) $YELLOW\w$BLUE\$(__git_ps1)$WHITE \$ "
+  export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN\$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
 }
 
 if [ "$DOTFILES_PS1" == "v1" ]; then
