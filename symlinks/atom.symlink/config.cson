@@ -81,6 +81,8 @@
     plugins:
       cursorline: true
       cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
   "package-sync":
