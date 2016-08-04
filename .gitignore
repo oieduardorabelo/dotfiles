@@ -1,1 +1,7 @@
 symlinks/gitconfig.symlink
+symlinks/atom.symlink/*
+!symlinks/atom.symlink/config.cson
+!symlinks/atom.symlink/init.coffee
+!symlinks/atom.symlink/packages.cson
+!symlinks/atom.symlink/projects.cson
+!symlinks/atom.symlink/snippets.cson
