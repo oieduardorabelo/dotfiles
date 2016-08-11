@@ -8,7 +8,9 @@
       "from"
     ]
   "atom-beautify":
-    _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
+    general:
+      _analyticsUserId: "64a4cd53-31ef-4f18-b63c-a2fff1f0f9dc"
+    jsx: {}
   "auto-update-packages": {}
   "autocomplete-modules": {}
   "autocomplete-plus": {}
@@ -36,7 +38,6 @@
       "language-hyperlink"
       "language-go"
       "language-csharp"
-      "language-coffee-script"
       "language-clojure"
       "language-c"
       "bookmarks"
@@ -59,14 +60,20 @@
       "war_resources/*"
     ]
     projectHome: "~/Projects/"
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
   editor:
     fontFamily: "Hack"
-    fontSize: 18
+    fontSize: 16
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+  "git-history":
+    showDiff: false
   "language-babel":
     autoIndentJSX: true
   linter: {}

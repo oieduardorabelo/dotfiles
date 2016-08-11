@@ -1,13 +1,13 @@
 packages: [
   "atom-beautify"
   "atom-ternjs"
-  "autoclose-html"
-  "code-peek"
   "double-tag"
   "editorconfig"
   "emmet"
+  "git-status"
   "highlight-selected"
   "language-babel"
+  "language-diff"
   "last-cursor-position"
   "linter"
   "linter-eslint"
@@ -16,4 +16,5 @@ packages: [
   "minimap-highlight-selected"
   "package-sync"
   "sort-lines"
+  "split-diff"
 ]
