@@ -46,6 +46,7 @@
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
     ignoredNames: [
+      "aas/*"
       "_ci/*"
       "_site/*"
       "build/*"
@@ -76,17 +77,29 @@
   "language-babel":
     autoIndentJSX: true
   linter: {}
+  "language-babel": {}
+  linter:
+    errorPanelHeight: 200
+  "linter-sass-lint": {}
   minimap:
     plugins:
       cursorline: true
       cursorlineDecorationsZIndex: 0
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "sync-settings": {}
   term3: {}
   "tree-view": {}

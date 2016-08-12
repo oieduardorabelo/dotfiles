@@ -13,6 +13,7 @@ packages: [
   "linter-eslint"
   "minimap"
   "minimap-cursorline"
+  "minimap-git-diff"
   "minimap-highlight-selected"
   "package-sync"
   "sort-lines"
