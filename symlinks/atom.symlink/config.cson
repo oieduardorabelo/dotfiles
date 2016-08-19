@@ -46,6 +46,8 @@
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
     ignoredNames: [
+      ".git/*"
+      ".tmp/*"
       "aas/*"
       "_ci/*"
       "_site/*"
@@ -66,7 +68,6 @@
     ]
   editor:
     fontFamily: "Hack"
-    fontSize: 16
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
@@ -74,9 +75,6 @@
     showInvisibles: true
   "git-history":
     showDiff: false
-  "language-babel":
-    autoIndentJSX: true
-  linter: {}
   "language-babel": {}
   linter:
     errorPanelHeight: 200
