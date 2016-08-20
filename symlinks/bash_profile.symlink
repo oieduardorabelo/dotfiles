@@ -1,0 +1,2 @@
+# loading dotfiles
+source ~/.dotfiles/dotfiles.sh
