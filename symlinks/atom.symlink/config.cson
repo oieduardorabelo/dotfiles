@@ -75,6 +75,13 @@
     showInvisibles: true
   "git-history":
     showDiff: false
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".json"
+      ".node"
+      ".jsx"
+    ]
   "language-babel": {}
   linter:
     errorPanelHeight: 200

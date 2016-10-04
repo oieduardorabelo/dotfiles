@@ -39,7 +39,7 @@ brewbump() {
   echo -e "\nUpdating Homebrew...\n"
   brew update
   echo -e "\nUpgrading Homebrew...\n"
-  brew upgrade --all
+  brew upgrade 
   echo -e "\nCleaning your mess...\n"
   brew cleanup
   brew prune
