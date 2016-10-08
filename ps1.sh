@@ -41,8 +41,8 @@ v2() {
   export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN\$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
 }
 
-if [ "$DOTFILES_PS1" == "v1" ]; then
-  v1
-else
+if [ "$DOTFILES_PS1" == "v2" ]; then
   v2
+else
+  v1
 fi

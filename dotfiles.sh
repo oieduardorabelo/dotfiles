@@ -4,7 +4,9 @@
 if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
 fi
+
 export PATH="$HOME/.dotfiles/bin:$PATH"
+
 export DOTFILES_ROOT="$HOME/.dotfiles"
 
 # bash-completion
@@ -14,19 +16,20 @@ if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 fi
 
 # GRC colorizes nifty unix tools all over the place
-if grc &>/dev/null && ! brew &>/dev/null; then
+if test "$(which grc)"; then
   # shellcheck disable=SC1090,SC1091
   . "$(brew --prefix)/etc/grc.bashrc"
 fi
 
 # nvm
-if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  # shellcheck disable=SC1090,SC1091
-  . "$(brew --prefix nvm)/nvm.sh"
-fi
+export PATH=$HOME/.nvm/versions/node/v6.3.1/bin/:$PATH
+# if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
+#   export NVM_DIR="$HOME/.nvm"
+#   # shellcheck disable=SC1090,SC1091
+#   . "$(brew --prefix nvm)/nvm.sh"
+# fi
 
-# rbenv
+# # rbenv
 if test "$(which rbenv)"; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
