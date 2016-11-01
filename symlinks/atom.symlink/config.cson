@@ -62,12 +62,14 @@
       "war_resources/*"
     ]
     projectHome: "~/Projects/"
+    restorePreviousWindowsOnStart: false
     themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
+      "one-dark-ui"
+      "cobalt2-syntax"
     ]
   editor:
     fontFamily: "Hack"
+    fontSize: 18
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true

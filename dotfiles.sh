@@ -22,12 +22,14 @@ if test "$(which grc)"; then
 fi
 
 # nvm
-export PATH=$HOME/.nvm/versions/node/v6.3.1/bin/:$PATH
-# if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
-#   export NVM_DIR="$HOME/.nvm"
-#   # shellcheck disable=SC1090,SC1091
-#   . "$(brew --prefix nvm)/nvm.sh"
-# fi
+export PATH=$HOME/.nvm/versions/node/v7.0.0/bin/:$PATH
+nvm() {
+    if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
+      export NVM_DIR="$HOME/.nvm"
+      # shellcheck disable=SC1090,SC1091
+      . "$(brew --prefix nvm)/nvm.sh"
+    fi
+}
 
 # # rbenv
 if test "$(which rbenv)"; then
