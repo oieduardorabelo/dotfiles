@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# editors config symlink
+
+ROOT="$HOME"
+DOTFILES_ROOT="$ROOT/.dotfiles"
+
+sublimeText() {
+  cd $ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+  mv Preferences.sublime-settings Preferences.sublime-settings.bkp
+  ln -s $DOTFILES_ROOT/sublime-text/Preferences.sublime-settings Preferences.sublime-settings
+}
+
+vscode() {
+  cd $ROOT/Library/Application\ Support/Code/User/ &&
+  mv settings.json settings.json.bkp &&
+  ln -s $DOTFILES_ROOT/vscode/settings.json settings.json
+}
+
+sublimeText
+vscode
