@@ -1,20 +1,31 @@
 #!/bin/bash
 
 # editors config symlink
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
 
 ROOT="$HOME"
 DOTFILES_ROOT="$ROOT/.dotfiles"
 
 sublimeText() {
-  cd $ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
-  mv Preferences.sublime-settings Preferences.sublime-settings.bkp
-  ln -s $DOTFILES_ROOT/sublime-text/Preferences.sublime-settings Preferences.sublime-settings
+    printf "  Would like link Sublime Text preferences? [y/n] "
+    read -r -e answer
+
+    if [ "$answer" = "y" ]; then
+        cd $ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+        mv Preferences.sublime-settings Preferences.sublime-settings.bkp
+        ln -s $DOTFILES_ROOT/sublime-text/Preferences.sublime-settings Preferences.sublime-settings
+    fi
 }
 
 vscode() {
-  cd $ROOT/Library/Application\ Support/Code/User/ &&
-  mv settings.json settings.json.bkp &&
-  ln -s $DOTFILES_ROOT/vscode/settings.json settings.json
+    printf "  Would like link VS Code settings? [y/n] "
+    read -r -e answer
+
+    if [ "$answer" = "y" ]; then
+        cd $ROOT/Library/Application\ Support/Code/User/ &&
+        mv settings.json settings.json.bkp &&
+        ln -s $DOTFILES_ROOT/vscode/settings.json settings.json
+    fi
 }
 
 sublimeText

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[[ "$(uname -s)" != "Darwin" ]] && exit 0
+
 _osxDefaults() {
   # Disable animations when opening and closing windows
   defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
