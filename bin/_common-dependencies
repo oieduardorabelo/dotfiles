@@ -30,28 +30,31 @@ if test ! "$(which brew)"; then
     echo "  Installing Homebrew for you..."
     installHomebrew
   fi
-fi
+else
+  if test "$(which brew)"; then
+    printf "  Would like to re-install Homebrew? [y/n] "
+    read -r -e answer
 
-if test "$(which brew)"; then
-  printf "  Would like to re-install Homebrew? [y/n] "
-  read -r -e answer
-
-  if [ "$answer" = "y" ]; then
-    uninstallHomebrew
-    installHomebrew
+    if [ "$answer" = "y" ]; then
+      uninstallHomebrew
+      installHomebrew
+    fi
   fi
 fi
 
-printf "  Would like to update, upgrade and cleanup Homebrew? [y/n] "
-read -r -e answer
+if test "$(which brew)"; then
+  printf "  Would like to update, upgrade and cleanup Homebrew? [y/n] "
+  read -r -e answer
 
-if [ "$answer" = "y" ]; then
-  printf "  \nRunning 'brew update'...\n\n"
-  brew update
-  printf "  \nRunning 'brew upgrade --all'...\n\n"
-  brew upgrade --all
-  printf "  \nRunning 'brew cleanup'...\n\n"
-  brew cleanup
+  if [ "$answer" = "y" ]; then
+    printf "  \nRunning 'brew update'...\n\n"
+    brew update
+    printf "  \nRunning 'brew upgrade'...\n\n"
+    brew upgrade
+    printf "  \nRunning 'brew cleanup'...\n\n"
+    brew cleanup
+    brew prune
+  fi
 fi
 
 # common dependencies
@@ -59,7 +62,8 @@ if test "$(which brew)"; then
   echo -e "
     Common dependencies:
 
-    ffmpeg, gifsicle, git, bash-completion, openssl, rbenv, ruby-build, coreutils, git, nvm
+    ffmpeg, gifsicle, git, grc, bash-completion, mas, m-cli, openssl,
+    rbenv, ruby-build, coreutils, nvm
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
@@ -68,12 +72,38 @@ if test "$(which brew)"; then
     brew install ffmpeg \
       gifsicle \
       git \
+      grc \
       bash-completion \
+      mas \
+      m-cli \
       openssl \
       rbenv \
       ruby-build \
       coreutils \
-      git \
       nvm || true
+  fi
+
+  echo -e "
+    Common cask dependencies:
+
+    font-hack, itsycal, the-unarchiver, atom, sublime-text, vlc, iterm2, alfred,
+    sizeup, 1password, dash, cleanmymac
+  "
+  printf "  Would like to install common dependencies? [y/n] "
+  read -r -e answerCask
+
+  if [ "$answerCask" = "y" ]; then
+    brew cask install font-hack \
+      itsycal \
+      the-unarchiver \
+      atom \
+      sublime-text \
+      vlc \
+      iterm2 \
+      alfred \
+      sizeup \
+      1password \
+      dash \
+      cleanmymac || true
   fi
 fi
