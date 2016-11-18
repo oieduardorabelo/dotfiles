@@ -62,8 +62,8 @@ if test "$(which brew)"; then
   echo -e "
     Common dependencies:
 
-    ffmpeg, gifsicle, git, grc, bash-completion, mas, m-cli, openssl,
-    rbenv, ruby-build, coreutils, nvm
+    ffmpeg, gifsicle, git, grc, bash-completion, m-cli, openssl,
+    rbenv, ruby-build, coreutils, nvm, diff-so-fancy
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
@@ -74,26 +74,26 @@ if test "$(which brew)"; then
       git \
       grc \
       bash-completion \
-      mas \
       m-cli \
       openssl \
       rbenv \
       ruby-build \
       coreutils \
-      nvm || true
+      nvm \
+      diff-so-fancy || true
   fi
 
   echo -e "
     Common cask dependencies:
 
     font-hack, itsycal, the-unarchiver, atom, sublime-text, vlc, iterm2, alfred,
-    sizeup, 1password, dash, cleanmymac
+    sizeup, 1password, dash, sourcetree, google-chrome, cleanmymac
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answerCask
 
   if [ "$answerCask" = "y" ]; then
-    brew cask install font-hack \
+    brew cask install caskroom/fonts/font-hack \
       itsycal \
       the-unarchiver \
       atom \
@@ -104,6 +104,8 @@ if test "$(which brew)"; then
       sizeup \
       1password \
       dash \
+      sourcetree \
+      google-chrome \
       cleanmymac || true
   fi
 fi
