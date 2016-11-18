@@ -14,6 +14,7 @@
   excludesfile      = ~/.gitignore
   precomposeunicode = true
   whitespace        = trailing-space,space-before-tab
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
   br                  = branch
   cl                  = clone
