@@ -5,6 +5,7 @@
 # https://help.github.com/articles/changing-author-info/
 #
 
+# shellcheck disable=SC2016
 git filter-branch --env-filter '
 OLD_EMAIL="your_old_email@example.com"
 CORRECT_NAME="Eduardo Rabelo"
