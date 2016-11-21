@@ -60,6 +60,7 @@
       "node_modules/*"
       "node_shrinkwrap/*"
       "war_resources/*"
+      "bower_components/*"
     ]
     projectHome: "~/Projects/"
     restorePreviousWindowsOnStart: false
@@ -68,8 +69,9 @@
       "cobalt2-syntax"
     ]
   editor:
+    autoIndent: true
     fontFamily: "Hack"
-    fontSize: 18
+    fontSize: 17
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
@@ -86,7 +88,7 @@
     ]
   "language-babel": {}
   linter:
-    errorPanelHeight: 200
+    errorPanelHeight: 374
   "linter-sass-lint": {}
   minimap:
     plugins:
