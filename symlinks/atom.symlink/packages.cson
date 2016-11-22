@@ -21,5 +21,6 @@ packages: [
   "package-sync"
   "sort-lines"
   "split-diff"
+  "synced-sidebar"
   "tabs-to-spaces"
 ]
