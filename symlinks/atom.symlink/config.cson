@@ -64,8 +64,8 @@
     projectHome: "~/Projects/"
     restorePreviousWindowsOnStart: false
     themes: [
-      "one-dark-ui"
-      "cobalt2-syntax"
+      "atom-dark-ui"
+      "atom-dark-syntax"
     ]
   editor:
     autoIndent: true
