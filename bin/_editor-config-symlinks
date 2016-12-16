@@ -22,9 +22,9 @@ vscode() {
     read -r -e answer
 
     if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application\ Support/Code/User/" || return
+        cd "$ROOT/Library/Application Support/Code/User/" || return
         mv settings.json settings.json.bkp
-        ln -s "$DOTFILES_ROOT/vscode/settings.json settings.json"
+        ln -s "$DOTFILES_ROOT/vscode/settings.json" settings.json
     fi
 }
 
