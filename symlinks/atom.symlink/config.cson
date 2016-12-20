@@ -65,12 +65,12 @@
     restorePreviousWindowsOnStart: false
     themes: [
       "atom-dark-ui"
-      "atom-dark-syntax"
+      "one-dark-syntax"
     ]
   editor:
     autoIndent: true
     fontFamily: "Hack"
-    fontSize: 17
+    fontSize: 16
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true

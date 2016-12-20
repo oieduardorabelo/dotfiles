@@ -2,7 +2,7 @@
     "editor.fontFamily": "Hack",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
-    "editor.lineHeight": 30,
+    "editor.lineHeight": 34,
     "editor.mouseWheelScrollSensitivity": 2,
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": true,
@@ -10,9 +10,12 @@
     "editor.rulers": [80, 120],
     "editor.tabCompletion": true,
     "editor.trimAutoWhitespace": true,
+    "editor.wordWrap": true,
     "editor.wrappingIndent": "indent",
     "explorer.openEditors.visible": 0,
     "files.trimTrailingWhitespace": true,
     "terminal.external.osxExec": "iTerm.app",
-    "window.reopenFolders": "none"
+    "window.openFilesInNewWindow": false,
+    "window.reopenFolders": "none",
+    "workbench.editor.enablePreview": false,
 }
