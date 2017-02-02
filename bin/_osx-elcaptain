@@ -5,6 +5,7 @@
 _osxDefaults() {
   # Disable animations when opening and closing windows
   defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+  defaults write NSGlobalDomain NSWindowResizeTime .001
 
   # Disable animations when opening a Quick Look window
   defaults write -g QLPanelAnimationDuration -float 0
@@ -26,6 +27,7 @@ _osxDefaults() {
 
   # Disable the delay when you hide the Dock
   defaults write com.apple.Dock autohide-delay -float 0
+  defaults write com.apple.dock autohide-time-modifier -int 0
 
   # Icon Dock size
   defaults write com.apple.Dock tilesize -float 32
