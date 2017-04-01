@@ -3,6 +3,14 @@
 # vim
 alias svim='sudo vim'
 
+# yarn
+alias yr='yarn'
+alias yra='yarn add --verbose'
+alias yra='yarn init -y'
+alias yrl='yarn list'
+alias yro='yarn outdated'
+alias yru='yarn upgrade-interactive'
+
 # npm
 alias npi='npm install --verbose'
 alias npl='npm ls --depth=0'
