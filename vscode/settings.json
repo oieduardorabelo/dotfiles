@@ -17,5 +17,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "window.openFilesInNewWindow": false,
     "window.reopenFolders": "none",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.projectDetection.disableDetect": true
 }
