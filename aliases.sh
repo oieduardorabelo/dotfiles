@@ -10,6 +10,7 @@ alias yra='yarn init -y'
 alias yrl='yarn list'
 alias yro='yarn outdated'
 alias yru='yarn upgrade-interactive'
+alias yri='yarn install'
 
 # npm
 alias npi='npm install --verbose'
