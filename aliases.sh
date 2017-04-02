@@ -6,11 +6,11 @@ alias svim='sudo vim'
 # yarn
 alias yr='yarn'
 alias yra='yarn add --verbose'
-alias yra='yarn init -y'
+alias yri='yarn install'
 alias yrl='yarn list'
 alias yro='yarn outdated'
+alias yrt='yarn init -y'
 alias yru='yarn upgrade-interactive'
-alias yri='yarn install'
 
 # npm
 alias npi='npm install --verbose'
