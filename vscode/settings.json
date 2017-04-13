@@ -10,14 +10,16 @@
     "editor.rulers": [80, 120],
     "editor.tabCompletion": true,
     "editor.trimAutoWhitespace": true,
-    "editor.wordWrap": true,
+    "editor.wordWrap": "on",
     "editor.wrappingIndent": "indent",
     "explorer.openEditors.visible": 0,
     "files.trimTrailingWhitespace": true,
     "terminal.external.osxExec": "iTerm.app",
-    "window.openFilesInNewWindow": false,
+    "window.openFilesInNewWindow": "off",
     "window.reopenFolders": "none",
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "vscode-icons",
-    "vsicons.projectDetection.disableDetect": true
-}
+    "vsicons.projectDetection.disableDetect": true,
+    "javascript.validate.enable": false,
+    "workbench.colorTheme": "One Dark+ (Sublime)"
+  }
