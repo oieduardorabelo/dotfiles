@@ -39,7 +39,12 @@ alias c="cd ~/"
 alias d="cd ~/Desktop"
 alias p="cd ~/Projects"
 alias dl="cd ~/Downloads"
-alias k="clear"
+
+k() {
+  # clear the console via terminal
+  # same as cmd+k, macos only
+  printf '\33c\e[3J'
+}
 
 # put mac to sleep via terminal
 alias sleepnow="pmset sleepnow"
@@ -53,10 +58,10 @@ if gls &>/dev/null; then
   alias ll="gls -l --color"
   alias la="gls -A --color"
 else
-  alias ls="ls -F --color"
-  alias l="ls -lAh --color"
-  alias ll="ls -l --color"
-  alias la="ls -A --color"
+  alias ls="ls -F"
+  alias l="ls -lAh"
+  alias ll="ls -l"
+  alias la="ls -A"
 fi
 
 # git
