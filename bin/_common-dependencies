@@ -62,8 +62,8 @@ if test "$(which brew)"; then
   echo -e "
     Common dependencies:
 
-    ffmpeg, gifsicle, git, grc, bash-completion, m-cli, openssl,
-    rbenv, ruby-build, coreutils, nvm, diff-so-fancy
+    ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
+    coreutils, diff-so-fancy
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
@@ -75,19 +75,18 @@ if test "$(which brew)"; then
       grc \
       bash-completion \
       m-cli \
-      openssl \
-      rbenv \
-      ruby-build \
-      coreutils \
       nvm \
+      coreutils \
       diff-so-fancy || true
   fi
 
   echo -e "
     Common cask dependencies:
 
-    font-hack, itsycal, the-unarchiver, atom, sublime-text, vlc, iterm2, alfred,
-    sizeup, 1password, dash, sourcetree, google-chrome, cleanmymac
+    font-hack, itsycal, the-unarchiver, sublime-text, vlc, iterm2, alfred,
+    sizeup, 1password, dash, google-chrome, cleanmymac,
+    qlcolorcode, qlstephen, qlmarkdown, quicklook-json, qlprettypatch, quicklook-csv,
+    betterzipql, qlimagesize, webpquicklook, suspicious-package, quicklookase, qlvideo
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answerCask
@@ -96,7 +95,6 @@ if test "$(which brew)"; then
     brew cask install caskroom/fonts/font-hack \
       itsycal \
       the-unarchiver \
-      atom \
       sublime-text \
       vlc \
       iterm2 \
@@ -104,8 +102,19 @@ if test "$(which brew)"; then
       sizeup \
       1password \
       dash \
-      sourcetree \
       google-chrome \
-      cleanmymac || true
+      cleanmymac \
+      qlcolorcode \
+      qlstephen \
+      qlmarkdown \
+      quicklook-json \
+      qlprettypatch \
+      quicklook-csv \
+      betterzipql \
+      qlimagesize \
+      webpquicklook \
+      suspicious-package \
+      quicklookase \
+      qlvideo || true
   fi
 fi
