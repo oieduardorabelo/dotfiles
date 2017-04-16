@@ -1,0 +1,24 @@
+{
+    "editor.cursorStyle": "block",
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 28,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "explorer.openEditors.visible": 0,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.validate.enable": false,
+    "window.openFilesInNewWindow": "off",
+    "window.openFoldersInNewWindow": "off",
+    "window.reopenFolders": "none",
+    "workbench.iconTheme": "vscode-icons",
+  }
