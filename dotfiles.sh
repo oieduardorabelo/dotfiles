@@ -22,7 +22,12 @@ if test "$(which grc)"; then
 fi
 
 # nvm
-export PATH=$HOME/.nvm/versions/node/v7.8.0/bin:$PATH
+if [[ ! "$CUSTOM_NODE_PATH" ]]; then
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v7.8.0/bin"
+fi
+
+export PATH=$PATH:$CUSTOM_NODE_PATH
+
 nvm() {
     if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
       export NVM_DIR="$HOME/.nvm"
