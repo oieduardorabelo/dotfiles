@@ -20,5 +20,5 @@
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "off",
     "window.reopenFolders": "none",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "vscode-icons"
   }
