@@ -1,5 +1,5 @@
-# loading dotfiles
-source ~/.dotfiles/dotfiles.sh
-
 # machine specific things
 source ~/.dotfiles-locals.sh
+
+# loading dotfiles
+source ~/.dotfiles/dotfiles.sh
