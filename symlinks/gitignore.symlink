@@ -3,3 +3,5 @@
 *~
 *.swp
 *.rbc
+node_modules
+bower_components
