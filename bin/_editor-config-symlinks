@@ -11,9 +11,9 @@ sublimeText() {
     read -r -e answer
 
     if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/" || return
-        mv Preferences.sublime-settings Preferences.sublime-settings.bkp
-        ln -s "$DOTFILES_ROOT/sublime-text/Preferences.sublime-settings Preferences.sublime-settings"
+        cd $ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/ || return
+        mv User User.bkp
+        ln -s $DOTFILES_ROOT/sublime-text/User
     fi
 }
 
