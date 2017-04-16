@@ -1,4 +1,5 @@
 # loading dotfiles
 source ~/.dotfiles/dotfiles.sh
 
-export PATH="$HOME/.yarn/bin:$PATH"
+# machine specific things
+source ~/.dotfiles-locals.sh
