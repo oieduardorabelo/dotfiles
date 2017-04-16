@@ -83,8 +83,8 @@ if test "$(which brew)"; then
   echo -e "
     Common cask dependencies:
 
-    font-hack, itsycal, the-unarchiver, sublime-text, vlc, iterm2, alfred,
-    sizeup, 1password, dash, google-chrome, cleanmymac,
+    font-hack, itsycal, the-unarchiver, sublime-text, vlc, alfred,
+    sizeup, 1password, dash, google-chrome, cleanmymac, sublime-text, visual-studio-code,
     qlcolorcode, qlstephen, qlmarkdown, quicklook-json, qlprettypatch, quicklook-csv,
     betterzipql, qlimagesize, webpquicklook, suspicious-package, quicklookase, qlvideo
   "
@@ -97,11 +97,12 @@ if test "$(which brew)"; then
       the-unarchiver \
       sublime-text \
       vlc \
-      iterm2 \
       alfred \
       sizeup \
       1password \
       dash \
+      sublime-text \
+      visual-studio-code \
       google-chrome \
       cleanmymac \
       qlcolorcode \
