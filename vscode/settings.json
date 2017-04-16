@@ -14,12 +14,10 @@
     "editor.wrappingIndent": "indent",
     "explorer.openEditors.visible": 0,
     "files.trimTrailingWhitespace": true,
-    "terminal.external.osxExec": "iTerm.app",
+    "javascript.validate.enable": false,
+    "vsicons.projectDetection.disableDetect": true,
     "window.openFilesInNewWindow": "off",
     "window.reopenFolders": "none",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.projectDetection.disableDetect": true,
-    "javascript.validate.enable": false,
-    "workbench.colorTheme": "One Dark+ (Sublime)"
+    "workbench.iconTheme": "vscode-icons"
   }
