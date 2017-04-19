@@ -41,6 +41,7 @@
       "language-c"
       "bookmarks"
       "background-tips"
+      "update-package-dependencies"
     ]
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
@@ -86,8 +87,7 @@
       ".jsx"
     ]
   "language-babel": {}
-  linter:
-    errorPanelHeight: 374
+  linter: {}
   "linter-sass-lint": {}
   minimap:
     plugins:
@@ -99,6 +99,8 @@
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
   "package-sync":
     createOnChange: true
     forceOverwrite: true
