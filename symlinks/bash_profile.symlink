@@ -1,5 +1,7 @@
 # machine specific things
-source ~/.dotfiles-locals.sh
+if [ -f "$HOME/.dotfiles-locals.sh" ]; then
+  source ~/.dotfiles-locals.sh
+fi
 
 # loading dotfiles
 source ~/.dotfiles/dotfiles.sh
