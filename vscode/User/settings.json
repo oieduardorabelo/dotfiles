@@ -2,6 +2,7 @@
   "editor.cursorStyle": "block",
   "editor.fontFamily": "Hack",
   "editor.fontSize": 16,
+  "editor.formatOnSave": true,
   "editor.lineHeight": 28,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
@@ -14,13 +15,6 @@
     120
   ],
   "explorer.openEditors.visible": 0,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "javascript.validate.enable": false,
-  "window.openFilesInNewWindow": "off",
-  "window.openFoldersInNewWindow": "off",
-  "window.reopenFolders": "none",
-  "workbench.iconTheme": "vscode-icons",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -29,6 +23,15 @@
     "**/.DS_Store": true,
     "**/coverage": true
   },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "window.openFilesInNewWindow": "off",
+  "window.openFoldersInNewWindow": "off",
+  "window.reopenFolders": "none",
+  "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
-  "window.zoomLevel": 0
+  "workbench.iconTheme": "vscode-icons"
 }
