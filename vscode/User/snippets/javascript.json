@@ -15,7 +15,7 @@
   	}
   */
   "React Class Component": {
-    "prefix": "rcreateclass",
+    "prefix": "rcc",
     "body": [
       "class $1 extends React.Component {",
       "\trender() {",
@@ -26,7 +26,7 @@
     "description": "create react class component"
   },
   "shouldComponentUpdate": {
-    "prefix": "shouldcomponentupdate",
+    "prefix": "scu",
     "body": [
       "shouldComponentUpdate(nextProps) {",
       "\t$1",
@@ -35,14 +35,14 @@
     "description": "shouldComponentUpdate method"
   },
   "console.log": {
-    "prefix": "clogg",
+    "prefix": "logg",
     "body": [
       "console.log($1);"
     ],
     "description": "console.log function"
   },
   "console.error": {
-    "prefix": "cloge",
+    "prefix": "loge",
     "body": [
       "console.error($1);"
     ],
