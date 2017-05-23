@@ -89,6 +89,8 @@
   "language-babel": {}
   linter: {}
   "linter-sass-lint": {}
+  "linter-ui-default":
+    panelHeight: 81
   minimap:
     plugins:
       cursorline: true
