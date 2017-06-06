@@ -25,7 +25,6 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.useNPMPackagedFlow": true,
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
   "window.openFilesInNewWindow": "off",
@@ -33,5 +32,6 @@
   "window.reopenFolders": "none",
   "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "prettier.eslintIntegration": true
 }
