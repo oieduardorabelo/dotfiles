@@ -2,7 +2,7 @@
   "editor.cursorStyle": "block",
   "editor.fontFamily": "Hack",
   "editor.fontSize": 16,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.lineHeight": 28,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
