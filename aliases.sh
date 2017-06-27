@@ -13,7 +13,7 @@ alias yrt='yarn init -y'
 alias yru='yarn upgrade-interactive'
 
 # npm
-alias npi='npm install --verbose'
+alias npi='npm install'
 alias npl='npm ls --depth=0'
 alias npo='npm outdated'
 alias npr='npm run'
