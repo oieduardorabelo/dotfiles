@@ -5,7 +5,7 @@ alias svim='sudo vim'
 
 # yarn
 alias yr='yarn'
-alias yra='yarn add --verbose'
+alias yra='yarn add'
 alias yri='yarn install'
 alias yrl='yarn list'
 alias yro='yarn outdated'
