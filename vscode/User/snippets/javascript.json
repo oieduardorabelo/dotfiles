@@ -14,6 +14,20 @@
   		"description": "Log output to console"
   	}
   */
+  "import ... from ...": {
+    "prefix": "impf",
+    "body": [
+      "import $1 from \"$2\";"
+    ],
+    "description": "ES Module import statement"
+  },
+  "export default ...": {
+    "prefix": "expd",
+    "body": [
+      "export default $1;"
+    ],
+    "description": "ES Module export statement"
+  },
   "React Class Component": {
     "prefix": "rcc",
     "body": [
