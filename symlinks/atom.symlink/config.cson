@@ -63,7 +63,6 @@
       "bower_components/*"
     ]
     projectHome: "~/Projects/"
-    restorePreviousWindowsOnStart: false
     themes: [
       "atom-dark-ui"
       "one-dark-syntax"
