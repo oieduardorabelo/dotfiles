@@ -15,6 +15,15 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules",
+		"bower_components"
+	],
 	"font_face": "Hack",
 	"font_options":
 	[
