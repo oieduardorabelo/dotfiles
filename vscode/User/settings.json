@@ -33,5 +33,6 @@
   "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "jest.enableInlineErrorMessages": false
 }
