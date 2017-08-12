@@ -1,19 +1,16 @@
 {
   "editor.cursorStyle": "block",
   "editor.fontFamily": "Hack",
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.formatOnSave": false,
-  "editor.lineHeight": 28,
+  "editor.lineHeight": 32,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
   "editor.renderControlCharacters": true,
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "explorer.openEditors.visible": 0,
   "files.exclude": {
     "**/.git": true,
@@ -29,10 +26,9 @@
   "javascript.validate.enable": false,
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
-  "window.reopenFolders": "none",
   "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "vscode-icons",
   "prettier.eslintIntegration": true,
-  "jest.enableInlineErrorMessages": false
+  "window.restoreWindows": "none",
+  "workbench.colorTheme": "Monokai Dimmed"
 }
