@@ -39,18 +39,45 @@ brewbump() {
   echo -e "\nUpdating Homebrew...\n"
   brew update
   echo -e "\nUpgrading Homebrew...\n"
-  brew upgrade 
+  brew upgrade
   echo -e "\nCleaning your mess...\n"
   brew cleanup
   brew prune
   echo -e "\nDone.\n"
 }
 
+# Yarn & NPM lockfiles
+genyarnlock() {
+  echo -e "\nyarn task started....\n"
+  echo -e "\nDeleting node modules....\n"
+  rm -rf node_modules &&
+  echo -e "\nDeleting yarn.lock....\n"
+  rm -rf yarn.lock &&
+  echo -e "\nRunning yarn install....\n"
+  yarn install
+  echo -e "\nyarn task done\n"
+}
+
+gennpmlock() {
+  echo -e "\nnpm task started....\n"
+  echo -e "\nDeleting node modules....\n"
+  rm -rf node_modules &&
+  echo -e "\nDeleting package-lock.json....\n"
+  rm -rf package-lock.json &&
+  echo -e "\nRunning npm install....\n"
+  npm install
+  echo -e "\nnpm task done\n"
+}
+
+genlockfiles() {
+  gennpmlock && genyarnlock
+}
+
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
 # credit: http://nparikh.org/notes/zshrc.txt
-extract () {
+extract() {
   if [ -f "$1" ]; then
     case "$1" in
       *.tar.bz2)  tar -jxvf "$1"                        ;;

@@ -15,6 +15,7 @@
   "autocomplete-modules": {}
   "autocomplete-plus": {}
   core:
+    audioBeep: false
     autoHideMenuBar: true
     automaticallyUpdate: false
     disabledPackages: [
@@ -63,14 +64,15 @@
       "bower_components/*"
     ]
     projectHome: "~/Projects/"
+    restorePreviousWindowsOnStart: "no"
     themes: [
-      "atom-dark-ui"
+      "one-light-ui"
       "one-dark-syntax"
     ]
   editor:
     autoIndent: true
-    fontFamily: "Hack"
-    fontSize: 16
+    fontFamily: "Fira Code"
+    fontSize: 18
     invisibles: {}
     lineHeight: 2
     scrollPastEnd: true
@@ -85,11 +87,12 @@
       ".node"
       ".jsx"
     ]
+    usePendingPanes: true
   "language-babel": {}
   linter: {}
   "linter-sass-lint": {}
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 69
   minimap:
     plugins:
       cursorline: true
@@ -105,6 +108,8 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    useEslint: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
