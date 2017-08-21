@@ -31,7 +31,6 @@
   "prettier.eslintIntegration": true,
   "window.restoreWindows": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Theme",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
