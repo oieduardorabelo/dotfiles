@@ -67,7 +67,7 @@
     restorePreviousWindowsOnStart: "no"
     themes: [
       "one-light-ui"
-      "one-dark-syntax"
+      "one-light-syntax"
     ]
   editor:
     autoIndent: true
