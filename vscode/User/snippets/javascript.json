@@ -72,5 +72,12 @@
       "}"
     ],
     "description": "Try-Catch statement"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": [
+        "import ${2:entities} from '${1:specifier}';$0"
+    ],
+    "description": "import statement"
   }
 }

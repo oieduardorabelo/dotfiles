@@ -1,6 +1,6 @@
 {
   "editor.cursorStyle": "block",
-  "editor.fontFamily": "Hack",
+  "editor.fontFamily": "Fira Code",
   "editor.fontSize": 14,
   "editor.lineHeight": 32,
   "editor.minimap.enabled": true,
@@ -25,7 +25,7 @@
   "javascript.validate.enable": false,
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1.5,
   "workbench.editor.enablePreview": false,
   "prettier.eslintIntegration": true,
   "window.restoreWindows": "none",
@@ -33,5 +33,6 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true
 }
