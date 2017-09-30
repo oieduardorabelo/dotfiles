@@ -43,6 +43,7 @@
       "bookmarks"
       "background-tips"
       "update-package-dependencies"
+      "flow-ide"
     ]
     excludeVcsIgnoredPaths: false
     hideGitIgnoredFiles: false
@@ -93,6 +94,7 @@
   "linter-sass-lint": {}
   "linter-ui-default":
     panelHeight: 69
+    showPanel: true
   minimap:
     plugins:
       cursorline: true
@@ -109,6 +111,10 @@
     createOnChange: true
     forceOverwrite: true
   "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNotInPackageJson: true
+      showInStatusBar: true
     useEslint: true
   "split-diff":
     diffWords: true

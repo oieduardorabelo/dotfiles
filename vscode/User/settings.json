@@ -16,16 +16,13 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/coverage": true
+    "**/.DS_Store": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "javascript.format.enable": false,
-  "javascript.validate.enable": false,
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
-  "window.zoomLevel": 1.5,
+  "window.zoomLevel": 0.75,
   "workbench.editor.enablePreview": false,
   "prettier.eslintIntegration": true,
   "window.restoreWindows": "none",
@@ -34,5 +31,11 @@
     "javascript": "javascriptreact"
   },
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/coverage": true
+  },
+  "workbench.colorTheme": "Solarized Light (no bold)"
 }
