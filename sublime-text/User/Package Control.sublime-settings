@@ -17,7 +17,9 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-tslint",
 		"SublimeLinter-flow",
-		"SyncedSideBar"
+		"SyncedSideBar",
+		"TypeScript"
 	]
 }

@@ -1,3 +1,4 @@
 [
-  { "keys": ["super+b"], "command": "js_prettier" }
+  { "keys": ["super+b"], "command": "js_prettier" },
+  { "keys": ["ctrl+alt+w"], "command": "close_all" }
 ]

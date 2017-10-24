@@ -1,7 +1,9 @@
 {
   "editor.cursorStyle": "block",
   "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
   "editor.fontSize": 14,
+  "editor.formatOnSave": true,
   "editor.lineHeight": 32,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
@@ -10,6 +12,10 @@
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "all",
   "editor.rulers": [80, 120],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
   "explorer.openEditors.visible": 0,
   "files.exclude": {
     "**/.git": true,
@@ -20,22 +26,16 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "window.openFilesInNewWindow": "off",
-  "window.openFoldersInNewWindow": "off",
-  "window.zoomLevel": 0.75,
-  "workbench.editor.enablePreview": false,
-  "prettier.eslintIntegration": true,
-  "window.restoreWindows": "none",
-  "workbench.iconTheme": "material-icon-theme",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "editor.fontLigatures": true,
-  "editor.formatOnSave": false,
+  "prettier.eslintIntegration": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/coverage": true
   },
-  "workbench.colorTheme": "Solarized Light (no bold)"
+  "window.openFilesInNewWindow": "off",
+  "window.openFoldersInNewWindow": "off",
+  "window.restoreWindows": "none",
+  "workbench.colorTheme": "Solarized Light (no bold)",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme"
 }
