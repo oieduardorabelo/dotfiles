@@ -22,6 +22,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
+    "**/.vscode/chrome": true,
     "**/.DS_Store": true
   },
   "files.insertFinalNewline": true,
