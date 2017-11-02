@@ -1,9 +1,10 @@
 #!/bin/bash
 
+# shellcheck source=/usr/local/opt/bash-git-prompt/share/gitprompt.sh
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  GIT_PROMPT_START=""
-  GIT_PROMPT_THEME=Solarized
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  export GIT_PROMPT_START=""
+  export GIT_PROMPT_THEME=Solarized
+  export __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 else
   #Prompt and prompt colors
