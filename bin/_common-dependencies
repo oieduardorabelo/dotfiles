@@ -63,7 +63,7 @@ if test "$(which brew)"; then
     Common dependencies:
 
     ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
-    coreutils, diff-so-fancy
+    coreutils, diff-so-fancy, bash-git-prompt
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
