@@ -11,7 +11,7 @@ sublimeText() {
     read -r -e answer
 
     if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application\ Support/Sublime\ Text\ 3/Packages/" || return
+        cd "$ROOT/Library/Application Support/Sublime Text 3/Packages/" || return
         mv User User.bkp
         ln -s "$DOTFILES_ROOT/sublime-text/User"
     fi
@@ -22,7 +22,7 @@ vscode() {
     read -r -e answer
 
     if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application\ Support/Code/" || return
+        cd "$ROOT/Library/Application Support/Code/" || return
         mv User User.bkp
         ln -s "$DOTFILES_ROOT/vscode/User"
     fi
