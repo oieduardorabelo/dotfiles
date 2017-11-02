@@ -11,10 +11,7 @@
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
@@ -41,5 +38,6 @@
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Solarized Light (no bold)",
   "workbench.editor.enablePreview": false,
+  "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "material-icon-theme"
 }
