@@ -31,7 +31,8 @@
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/coverage": true
+    "**/coverage": true,
+    "**/build": true
   },
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
@@ -39,5 +40,6 @@
   "workbench.colorTheme": "Solarized Light (no bold)",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1
 }
