@@ -36,6 +36,8 @@
 	"ignored_packages":
 	[
 		"JavaScript",
+		"JsPrettier",
+		"TypeScript",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -47,6 +49,7 @@
 	"line_padding_bottom": 4,
 	"line_padding_top": 4,
 	"match_brackets_angle": true,
+	"node_path": "/Users/eduardorabelo/.nvm/versions/node/v8.9.1/bin/node",
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
 	"scroll_speed": 2.0,
