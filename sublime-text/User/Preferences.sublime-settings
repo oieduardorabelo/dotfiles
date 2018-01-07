@@ -36,8 +36,6 @@
 	"ignored_packages":
 	[
 		"JavaScript",
-		"JsPrettier",
-		"TypeScript",
 		"Vintage"
 	],
 	"indent_guide_options":

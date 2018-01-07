@@ -2,8 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"JsPrettier",
-		"TypeScript"
 	],
 	"installed_packages":
 	[
