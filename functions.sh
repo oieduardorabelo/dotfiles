@@ -73,6 +73,10 @@ genlockfiles() {
   gennpmlock && genyarnlock
 }
 
+nuke_node_modules() {
+  find . -name node_modules -type d -prune -exec rm -rf '{}' +
+}
+
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
