@@ -29,7 +29,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 18,
+	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -47,7 +47,7 @@
 	"line_padding_bottom": 4,
 	"line_padding_top": 4,
 	"match_brackets_angle": true,
-	"node_path": "/Users/eduardorabelo/.nvm/versions/node/v8.9.1/bin/node",
+	"node_path": "/Users/eduardorabelo/.nvm/versions/node/v8.9.4/bin/node",
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
 	"scroll_speed": 2.0,

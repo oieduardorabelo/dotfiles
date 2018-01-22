@@ -16,8 +16,8 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-tslint",
+		"SublimeLinter-eslint",
 		"SublimeLinter-flow",
 		"SyncedSideBar",
 		"TypeScript"
