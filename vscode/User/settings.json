@@ -40,7 +40,7 @@
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Solarized Light (no bold)",
+  "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "material-icon-theme",
