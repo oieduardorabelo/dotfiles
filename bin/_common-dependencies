@@ -63,7 +63,7 @@ if test "$(which brew)"; then
     Common dependencies:
 
     ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
-    coreutils, diff-so-fancy, bash-git-prompt
+    coreutils, diff-so-fancy, bash-git-prompt, yarn (without-node)
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
@@ -77,6 +77,7 @@ if test "$(which brew)"; then
       m-cli \
       nvm \
       coreutils \
+      brew install yarn --without-node \
       diff-so-fancy || true
   fi
 
