@@ -6,7 +6,7 @@
 # https://www.gitignore.io/docs
 if [ "$1" ]; then
   curl -L -s https://www.gitignore.io/api/"$1" | pbcopy
-  printf "\n\r\033[2K  [ \033[00;32m.gitignore copied to pasteboard.\033[0m ] %s\n\n" "$1"
+  printf "\\n\\r\\033[2K  [ \\033[00;32m.gitignore copied to pasteboard.\\033[0m ] %s\\n\\n" "$1"
 else
   curl -L -s https://www.gitignore.io/api
 fi

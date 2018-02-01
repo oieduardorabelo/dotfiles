@@ -7,7 +7,7 @@
 [[ "$(uname -s)" != "Darwin" ]] && exit 0
 
 fail() {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] %s\n" "$1"
+  printf "\\r\\033[2K  [\\033[0;31mFAIL\\033[0m] %s\\n" "$1"
   echo ''
 }
 
@@ -47,11 +47,11 @@ if test "$(which brew)"; then
   read -r -e answer
 
   if [ "$answer" = "y" ]; then
-    printf "  \nRunning 'brew update'...\n\n"
+    printf "  \\nRunning 'brew update'...\\n\\n"
     brew update
-    printf "  \nRunning 'brew upgrade'...\n\n"
+    printf "  \\nRunning 'brew upgrade'...\\n\\n"
     brew upgrade
-    printf "  \nRunning 'brew cleanup'...\n\n"
+    printf "  \\nRunning 'brew cleanup'...\\n\\n"
     brew cleanup
     brew prune
   fi

@@ -21,7 +21,7 @@ alias npr='npm run'
 alias npt='npm init -y'
 
 # ssh
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '\n\r\033[2K  [ \033[00;32mPublic key copied to pasteboard.\033[0m ] id_rsa.pub\n\n'"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '\\n\\r\\033[2K  [ \\033[00;32mPublic key copied to pasteboard.\\033[0m ] id_rsa.pub\\n\\n'"
 
 # misc
 alias grep="grep --color=auto"

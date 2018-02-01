@@ -12,7 +12,7 @@ port() {
 
 # Reloading .bash_profile
 reload() {
-  echo -e "\nReloading bash...\n"
+  echo -e "\\nReloading bash...\\n"
   # shellcheck disable=SC1090,SC1091
   . "$HOME/.bash_profile"
   clear
@@ -36,37 +36,37 @@ gembump() {
 
 #Homebrew
 brewbump() {
-  echo -e "\nUpdating Homebrew...\n"
+  echo -e "\\nUpdating Homebrew...\\n"
   brew update
-  echo -e "\nUpgrading Homebrew...\n"
+  echo -e "\\nUpgrading Homebrew...\\n"
   brew upgrade
-  echo -e "\nCleaning your mess...\n"
+  echo -e "\\nCleaning your mess...\\n"
   brew cleanup
   brew prune
-  echo -e "\nDone.\n"
+  echo -e "\\nDone.\\n"
 }
 
 # Yarn & NPM lockfiles
 genyarnlock() {
-  echo -e "\nyarn task started....\n"
-  echo -e "\nDeleting node modules....\n"
+  echo -e "\\nyarn task started....\\n"
+  echo -e "\\nDeleting node modules....\\n"
   rm -rf node_modules &&
-  echo -e "\nDeleting yarn.lock....\n"
+  echo -e "\\nDeleting yarn.lock....\\n"
   rm -rf yarn.lock &&
-  echo -e "\nRunning yarn install....\n"
+  echo -e "\\nRunning yarn install....\\n"
   yarn install
-  echo -e "\nyarn task done\n"
+  echo -e "\\nyarn task done\\n"
 }
 
 gennpmlock() {
-  echo -e "\nnpm task started....\n"
-  echo -e "\nDeleting node modules....\n"
+  echo -e "\\nnpm task started....\\n"
+  echo -e "\\nDeleting node modules....\\n"
   rm -rf node_modules &&
-  echo -e "\nDeleting package-lock.json....\n"
+  echo -e "\\nDeleting package-lock.json....\\n"
   rm -rf package-lock.json &&
-  echo -e "\nRunning npm install....\n"
+  echo -e "\\nRunning npm install....\\n"
   npm install
-  echo -e "\nnpm task done\n"
+  echo -e "\\nnpm task done\\n"
 }
 
 genlockfiles() {

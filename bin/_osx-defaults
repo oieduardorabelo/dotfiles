@@ -192,7 +192,7 @@ defaults write com.apple.dock launchanim -bool false
 echo ""
 echo "› Mail:"
 echo "  › Add the keyboard shortcut CMD + Enter to send an email"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 # shellcheck disable=SC2016
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Archive" '@$e'
 

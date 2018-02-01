@@ -15,4 +15,4 @@ DOTFILES_ROOT="$HOME/.dotfiles"
 . "$DOTFILES_ROOT/bin/_editor-config-symlinks"
 
 # shellcheck disable=SC1090,SC1091
-. "$DOTFILES_ROOT/bin/_osx-elcaptain"
+. "$DOTFILES_ROOT/bin/_osx-defaults"
