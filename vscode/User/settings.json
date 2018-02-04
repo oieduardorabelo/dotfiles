@@ -40,9 +40,9 @@
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
   "window.restoreWindows": "none",
+  "window.zoomLevel": 0.25,
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 1.5
+  "workbench.iconTheme": "material-icon-theme"
 }
