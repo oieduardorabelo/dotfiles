@@ -11,10 +11,7 @@
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
@@ -40,7 +37,7 @@
   "window.openFilesInNewWindow": "off",
   "window.openFoldersInNewWindow": "off",
   "window.restoreWindows": "none",
-  "window.zoomLevel": 0.25,
+  "window.zoomLevel": 0.5,
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.enablePreview": false,
   "workbench.fontAliasing": "antialiased",
