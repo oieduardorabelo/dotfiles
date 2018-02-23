@@ -85,7 +85,7 @@ if test "$(which brew)"; then
   echo -e "
     Common cask dependencies:
 
-    font-hack, itsycal, the-unarchiver, sublime-text, vlc, alfred,
+    font-fira-code, itsycal, the-unarchiver, sublime-text, vlc, alfred,
     sizeup, 1password, dash, google-chrome, cleanmymac, sublime-text, visual-studio-code,
     qlcolorcode, qlstephen, qlmarkdown, quicklook-json, qlprettypatch, quicklook-csv,
     betterzipql, qlimagesize, webpquicklook, suspicious-package, quicklookase, qlvideo
@@ -94,7 +94,7 @@ if test "$(which brew)"; then
   read -r -e answerCask
 
   if [ "$answerCask" = "y" ]; then
-    brew cask install caskroom/fonts/font-hack \
+    brew cask install caskroom/fonts/font-fira-code \
       itsycal \
       the-unarchiver \
       sublime-text \
