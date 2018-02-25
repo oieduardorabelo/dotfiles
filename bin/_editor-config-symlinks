@@ -17,16 +17,4 @@ sublimeText() {
     fi
 }
 
-vscode() {
-    printf "  Would like link VS Code settings? [y/n] "
-    read -r -e answer
-
-    if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application Support/Code/" || return
-        mv User User.bkp
-        ln -s "$DOTFILES_ROOT/vscode/User"
-    fi
-}
-
 sublimeText
-vscode
