@@ -48,6 +48,7 @@
 	"line_padding_bottom": 6,
 	"line_padding_top": 6,
 	"match_brackets_angle": true,
+	"node_path": "/Users/eduardorabelo/.nvm/versions/node/v8.9.4/bin/node",
 	"open_files_in_new_window": false,
 	"scroll_past_end": true,
 	"scroll_speed": 2.0,
