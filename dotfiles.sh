@@ -5,7 +5,7 @@ if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
 fi
 
-export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="$PATH:$HOME/.dotfiles/bin"
 
 export DOTFILES_ROOT="$HOME/.dotfiles"
 
@@ -21,22 +21,21 @@ if test "$(which grc)"; then
   . "$(brew --prefix)/etc/grc.bashrc"
 fi
 
-# nvm
+# nvm / node
 if [[ ! "$CUSTOM_NODE_PATH" ]]; then
-  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.9.4/bin"
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.10.0/bin"
 fi
-
-export PATH=$PATH:$CUSTOM_NODE_PATH
 
 nvm() {
     if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
-      export NVM_DIR="$HOME/.nvm"
       # shellcheck disable=SC1090,SC1091
       . "$(brew --prefix nvm)/nvm.sh"
     fi
 }
+export NVM_DIR="$HOME/.nvm"
+export NODE_PATH="$CUSTOM_NODE_PATH"
 
-# # rbenv
+# rbenv
 if test "$(which rbenv)"; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
