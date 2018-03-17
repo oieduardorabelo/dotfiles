@@ -34,6 +34,7 @@ nvm() {
 }
 export NVM_DIR="$HOME/.nvm"
 export NODE_PATH="$CUSTOM_NODE_PATH"
+export PATH="$PATH:$NODE_PATH"
 
 # rbenv
 if test "$(which rbenv)"; then
