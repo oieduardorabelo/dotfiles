@@ -24,12 +24,11 @@
 		"node_modules",
 		"bower_components"
 	],
-	"font_face": "Hack",
+	"font_face": "'Fira Code'",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-  "font_face": "'Fira Code'",
 	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
