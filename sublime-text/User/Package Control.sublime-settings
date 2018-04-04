@@ -16,8 +16,8 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-contrib-tslint",
 		"SublimeLinter-eslint",
+		"SublimeLinter-tslint",
 		"SyncedSideBar",
 		"Theme - Solarized Flat",
 		"TypeScript"
