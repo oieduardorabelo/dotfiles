@@ -1,13 +1,20 @@
 #!/bin/bash
 
+function addToPATH {
+  case ":$PATH:" in
+    *":$1:"*) :;; # already there
+    *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
+  esac
+}
+
 # exports
 if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
 fi
 
-export PATH="$PATH:$HOME/.dotfiles/bin"
-
 export DOTFILES_ROOT="$HOME/.dotfiles"
+
+addToPATH "$DOTFILES_ROOT/bin"
 
 # bash-completion
 if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
@@ -34,12 +41,13 @@ nvm() {
 }
 export NVM_DIR="$HOME/.nvm"
 export NODE_PATH="$CUSTOM_NODE_PATH"
-export PATH="$PATH:$NODE_PATH"
+
+addToPATH "$NODE_PATH"
 
 # rbenv
 if test "$(which rbenv)"; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
+  addToPATH "$HOME/.rbenv/bin"
+  addToPATH "$HOME/.rbenv/shims"
 fi
 
 # shellcheck disable=SC1090,SC1091

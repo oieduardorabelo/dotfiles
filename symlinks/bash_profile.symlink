@@ -1,7 +1,7 @@
+# loading dotfiles
+. ~/.dotfiles/dotfiles.sh
+
 # machine specific things
 if [ -f "$HOME/.dotfiles-locals.sh" ]; then
-  source ~/.dotfiles-locals.sh
+  . ~/.dotfiles-locals.sh
 fi
-
-# loading dotfiles
-source ~/.dotfiles/dotfiles.sh

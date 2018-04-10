@@ -15,7 +15,7 @@ reload() {
   echo -e "\\nReloading bash...\\n"
   # shellcheck disable=SC1090,SC1091
   . "$HOME/.bash_profile"
-  clear
+  k
 }
 
 # npm bash local packages bin
