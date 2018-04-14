@@ -20,6 +20,7 @@ reload() {
 
 # npm bash local packages bin
 npm-do() {
+  # shellcheck disable=SC2030
   (PATH=$(npm bin):$PATH; eval "$@";)
 }
 
@@ -78,7 +79,7 @@ nuke_node_modules() {
 }
 
 nuke_logs() {
-  find . -name *.log -type f -prune -exec rm -rf '{}' +
+  find . -name "*.log" -type f -prune -exec rm -rf '{}' +
 }
 
 # Usage: extract <file>
@@ -109,5 +110,6 @@ extract() {
 }
 
 ppath() {
-  tr : '\n' <<<$PATH
+  # shellcheck disable=SC2031
+  tr : '\n' <<< "$PATH"
 }
