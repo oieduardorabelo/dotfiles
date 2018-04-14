@@ -47,6 +47,10 @@ brewbump() {
   echo -e "\\nDone.\\n"
 }
 
+brewlist() {
+  tr "  " '\n' <<< "$(brew list)"
+}
+
 # Yarn & NPM lockfiles
 genyarnlock() {
   echo -e "\\nyarn task started....\\n"
