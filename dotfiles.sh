@@ -23,7 +23,7 @@ if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 fi
 
 # GRC colorizes nifty unix tools all over the place
-if test "$(which grc)"; then
+if test "$(command -v grc)"; then
   # shellcheck disable=SC1090,SC1091
   . "$(brew --prefix)/etc/grc.bashrc"
 fi
@@ -45,7 +45,7 @@ export NODE_PATH="$CUSTOM_NODE_PATH"
 addToPATH "$NODE_PATH"
 
 # rbenv
-if test "$(which rbenv)"; then
+if test "$(command -v rbenv)"; then
   addToPATH "$HOME/.rbenv/bin"
   addToPATH "$HOME/.rbenv/shims"
 fi

@@ -22,7 +22,7 @@ installHomebrew() {
 }
 
 # Check for Homebrew
-if test ! "$(which brew)"; then
+if test ! "$(command -v brew)"; then
   printf "  Would like to install Homebrew? [y/n] "
   read -r -e answer
 
@@ -31,7 +31,7 @@ if test ! "$(which brew)"; then
     installHomebrew
   fi
 else
-  if test "$(which brew)"; then
+  if test "$(command -v brew)"; then
     printf "  Would like to re-install Homebrew? [y/n] "
     read -r -e answer
 
@@ -42,7 +42,7 @@ else
   fi
 fi
 
-if test "$(which brew)"; then
+if test "$(command -v brew)"; then
   printf "  Would like to update, upgrade and cleanup Homebrew? [y/n] "
   read -r -e answer
 
@@ -58,7 +58,7 @@ if test "$(which brew)"; then
 fi
 
 # common dependencies
-if test "$(which brew)"; then
+if test "$(command -v brew)"; then
   echo -e "
     Common dependencies:
 
