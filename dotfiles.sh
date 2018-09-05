@@ -30,7 +30,7 @@ fi
 
 # nvm / node
 if [[ ! "$CUSTOM_NODE_PATH" ]]; then
-  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.11.3/bin"
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.11.4/bin"
 fi
 
 nvm() {
