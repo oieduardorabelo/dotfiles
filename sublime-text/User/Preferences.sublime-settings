@@ -24,7 +24,7 @@
 		"node_modules",
 		"bower_components"
 	],
-	"font_face": "'Fira Code'",
+	"font_face": "Fira Code",
 	"font_options":
 	[
 		"subpixel_antialias"
