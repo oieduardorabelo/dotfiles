@@ -13,6 +13,8 @@ alias yro='yarn outdated'
 alias yrt='yarn init -y'
 alias yru='yarn upgrade-interactive'
 alias yrw='yarn workspace'
+alias yrg='yarn global'
+alias yrgl='yarn global list'
 
 # npm
 alias npi='npm install'
