@@ -1,5 +1,4 @@
 #!/bin/bash
-
 function addToPATH {
   case ":$PATH:" in
     *":$1:"*) :;; # already there
@@ -8,6 +7,8 @@ function addToPATH {
 }
 
 # exports
+export BAT_THEME="OneHalfLight"
+
 if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
 fi

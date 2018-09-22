@@ -60,16 +60,17 @@ fi
 # common dependencies
 if test "$(command -v brew)"; then
   echo -e "
-    Common dependencies:
+    Common ''brew'' dependencies:
 
-    ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
+    bat, ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
     coreutils, diff-so-fancy, bash-git-prompt, yarn (without-node)
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
 
   if [ "$answer" = "y" ]; then
-    brew install ffmpeg \
+    brew install bat \
+      ffmpeg \
       gifsicle \
       git \
       grc \
@@ -83,7 +84,7 @@ if test "$(command -v brew)"; then
   fi
 
   echo -e "
-    Common cask dependencies:
+    Common ''brew/cask'' dependencies:
 
     From: https://github.com/sindresorhus/quick-look-plugins
      - qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize
