@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # shellcheck source=/usr/local/opt/bash-git-prompt/share/gitprompt.sh
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [ -f "$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   export GIT_PROMPT_START=""
   export GIT_PROMPT_THEME=Solarized
   export __GIT_PROMPT_DIR
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  __GIT_PROMPT_DIR=$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share
   # shellcheck disable=SC1091
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+  source "$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh"
 else
   #Prompt and prompt colors
   # 30m - Black
@@ -47,7 +47,7 @@ else
 
   v2() {
     # PS1
-    export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN\$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
+    export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
   }
 
   v3() {

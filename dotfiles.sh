@@ -6,49 +6,49 @@ function addToPATH {
   esac
 }
 
-# exports
+# env exports
 export BAT_THEME="OneHalfLight"
+export DOTFILES_BREW_PREFIX="$(brew --prefix)"
+export DOTFILES_ROOT="$HOME/.dotfiles"
 
 if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
 fi
 
-export DOTFILES_ROOT="$HOME/.dotfiles"
-
-addToPATH "$DOTFILES_ROOT/bin"
-
-# bash-completion
-if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-  # shellcheck disable=SC1090,SC1091
-  . "$(brew --prefix)/etc/bash_completion"
-fi
-
-# GRC colorizes nifty unix tools all over the place
-if test "$(command -v grc)"; then
-  # shellcheck disable=SC1090,SC1091
-  . "$(brew --prefix)/etc/grc.bashrc"
-fi
-
-# nvm / node
 if [[ ! "$CUSTOM_NODE_PATH" ]]; then
-  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.11.4/bin"
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v8.12.0/bin"
 fi
-
-nvm() {
-    if [ -f "$(brew --prefix nvm)/nvm.sh" ]; then
-      # shellcheck disable=SC1090,SC1091
-      . "$(brew --prefix nvm)/nvm.sh"
-    fi
-}
-export NVM_DIR="$HOME/.nvm"
 export NODE_PATH="$CUSTOM_NODE_PATH"
 
+export NVM_DIR="$HOME/.nvm"
+
+# local -x
+addToPATH "$DOTFILES_ROOT/bin"
+
+# node
 addToPATH "$NODE_PATH"
 
 # rbenv
-if test "$(command -v rbenv)"; then
-  addToPATH "$HOME/.rbenv/bin"
-  addToPATH "$HOME/.rbenv/shims"
+addToPATH "$HOME/.rbenv/bin"
+addToPATH "$HOME/.rbenv/shims"
+
+# bash-completion
+if [ -f "$DOTFILES_BREW_PREFIX/etc/bash_completion" ]; then
+  # shellcheck disable=SC1090,SC1091
+  . "$DOTFILES_BREW_PREFIX/etc/bash_completion"
+fi
+
+nvm() {
+  if [ -f "$DOTFILES_BREW_PREFIX/opt/nvm/nvm.sh" ]; then
+    # shellcheck disable=SC1090,SC1091
+    . "$DOTFILES_BREW_PREFIX/opt/nvm/nvm.sh"
+  fi
+}
+
+# GRC colorizes nifty unix tools all over the place
+if [ -f "$DOTFILES_BREW_PREFIX/bin/grc" ]; then
+  # shellcheck disable=SC1090,SC1091
+  . "$DOTFILES_BREW_PREFIX/etc/grc.bashrc"
 fi
 
 # shellcheck disable=SC1090,SC1091
