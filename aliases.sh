@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# bat>cat
+alias cat='bat'
+
 # vim
 alias svim='sudo vim'
 
