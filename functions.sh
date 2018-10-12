@@ -117,3 +117,7 @@ ppath() {
   # shellcheck disable=SC2031
   tr : '\n' <<< "$PATH"
 }
+
+mongo_start() {
+  mongod --config /usr/local/etc/mongod.conf
+}
