@@ -7,8 +7,9 @@ function addToPATH {
 }
 
 # env exports
+DOTFILES_BREW_PREFIX="$(brew --prefix)"
+export DOTFILES_BREW_PREFIX
 export BAT_THEME="OneHalfLight"
-export DOTFILES_BREW_PREFIX="$(brew --prefix)"
 export DOTFILES_ROOT="$HOME/.dotfiles"
 
 if [[ ! "$EDITOR" ]]; then
