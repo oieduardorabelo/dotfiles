@@ -47,7 +47,7 @@ else
 
   v2() {
     # PS1
-    CWD=("\w")
+    CWD=("\\w")
     PS1=("$RED\$(ruby -e 'print RUBY_VERSION') $GREEN$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD${CWD[@]}$BLUEBOLD\$(__git_ps1)$RESET \$ ")
     export "${PS1[@]}"
   }
