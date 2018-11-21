@@ -47,12 +47,14 @@ else
 
   v2() {
     # PS1
-    export PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
+    PS1="$RED\$(ruby -e 'print RUBY_VERSION') $GREEN$(node --version) $BLUEBOLD\$(npm --version) $YELLOWBOLD\\w$BLUEBOLD\$(__git_ps1)$RESET \$ "
+    export PS1
   }
 
   v3() {
     # PS1
-    export PS1="$PURPLEBOLD\\w$PURPLE\$(__git_ps1)$RESET \$ \\n"
+    PS1="$PURPLEBOLD\\w$PURPLE\$(__git_ps1)$RESET \$ \\n"
+    export PS1
   }
 
   if [ "$DOTFILES_PS1" == "v3" ]; then
