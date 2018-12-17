@@ -27,6 +27,7 @@
 	"font_face": "Fira Code",
 	"font_options":
 	[
+    "no_bold",
 		"subpixel_antialias"
 	],
 	"font_size": 16,
