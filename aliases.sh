@@ -114,3 +114,7 @@ alias rnios6s='react-native run-ios --simulator "iPhone 6s"'
 
 alias rnland='react-native log-android'
 alias rnlios='react-native log-ios'
+
+open_android_emulator() {
+  emulator @Nexus_5X_API_28
+}

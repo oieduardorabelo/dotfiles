@@ -2,7 +2,7 @@
 function addToPATH {
   case ":$PATH:" in
     *":$1:"*) :;; # already there
-    *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
+    *) PATH="$PATH:$1";; # or PATH="$PATH:$1"
   esac
 }
 
@@ -11,6 +11,7 @@ DOTFILES_BREW_PREFIX="$(brew --prefix)"
 export DOTFILES_BREW_PREFIX
 export BAT_THEME="OneHalfLight"
 export DOTFILES_ROOT="$HOME/.dotfiles"
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 if [[ ! "$EDITOR" ]]; then
   export EDITOR='subl'
@@ -45,6 +46,12 @@ nvm() {
     . "$DOTFILES_BREW_PREFIX/opt/nvm/nvm.sh"
   fi
 }
+
+# Android Studio
+addToPATH "$ANDROID_HOME/emulator"
+addToPATH "$ANDROID_HOME/tools"
+addToPATH "$ANDROID_HOME/tools/bin"
+addToPATH "$ANDROID_HOME/platform-tools"
 
 # GRC colorizes nifty unix tools all over the place
 if [ -f "$DOTFILES_BREW_PREFIX/bin/grc" ]; then
