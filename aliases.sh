@@ -118,3 +118,7 @@ alias rnlios='react-native log-ios'
 open_android_emulator() {
   emulator @Nexus_5X_API_28
 }
+
+open_ios_simulator() {
+  open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
+}
