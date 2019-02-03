@@ -120,3 +120,7 @@ ppath() {
 mongo_start() {
   mongod --config /usr/local/etc/mongod.conf
 }
+
+rr() {
+ rm -rf "$@"
+}

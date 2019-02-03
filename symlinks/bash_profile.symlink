@@ -5,7 +5,3 @@
 if [ -f "$HOME/.dotfiles-locals.sh" ]; then
   . ~/.dotfiles-locals.sh
 fi
-
-function rr() {
- rm -rf "$@"
-}

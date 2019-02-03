@@ -79,7 +79,7 @@ if test "$(command -v brew)"; then
       coreutils \
       diff-so-fancy \
       bash-git-prompt|| true
-    brew install yarn --without-node || true
+    brew install yarn --ignore-dependencies || true
   fi
 
   echo -e "
