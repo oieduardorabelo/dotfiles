@@ -24,6 +24,8 @@ export NODE_PATH="$CUSTOM_NODE_PATH"
 
 export NVM_DIR="$HOME/.nvm"
 
+addToPATH "/usr/local/sbin"
+
 # local -x
 addToPATH "$DOTFILES_ROOT/bin"
 

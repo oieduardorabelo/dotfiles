@@ -61,20 +61,18 @@ if test "$(command -v brew)"; then
   echo -e "
     Common ''brew'' dependencies:
 
-    bat, ffmpeg, gifsicle, git, grc, bash-completion, m-cli, nvm,
+    bash, bat, git, grc, bash-completion, nvm,
     coreutils, diff-so-fancy, bash-git-prompt, yarn (without-node)
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
 
   if [ "$answer" = "y" ]; then
-    brew install bat \
-      ffmpeg \
-      gifsicle \
+    brew install bash \
+      bat \
       git \
       grc \
       bash-completion \
-      m-cli \
       nvm \
       coreutils \
       diff-so-fancy \
@@ -103,7 +101,7 @@ if test "$(command -v brew)"; then
 
     echo "Installing custom list..."
     brew cask install caskroom/fonts/font-fira-code \
-      font-fira-code itsycal the-unarchiver vlc alfred \
+      itsycal the-unarchiver vlc alfred \
       sizeup 1password dash cleanmymac sublime-text visual-studio-code
   fi
 fi
