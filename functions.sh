@@ -132,3 +132,7 @@ psql_stop() {
 rr() {
  rm -rf "$@"
 }
+
+never_index_node_modules() {
+  find . -type d -name "node_modules" -exec touch "{}/.metadata_never_index" \;
+}
