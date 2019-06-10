@@ -101,11 +101,11 @@ __git_complete gp _git_push
 __git_complete gl _git_pull
 
 git_ignore_locally() {
-  git update-index --assume-unchanged $1;
+  git update-index --assume-unchanged "$1";
 }
 
 git_find_in_history() {
-  git log --all --full-history -- $1
+  git log --all --full-history -- "$1"
 }
 
 # react-native
