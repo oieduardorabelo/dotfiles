@@ -125,7 +125,7 @@ alias rnland='react-native log-android'
 alias rnlios='react-native log-ios'
 
 open_android_emulator() {
-  emulator @Nexus_5X_API_28
+  emulator @Pixel_API_28
 }
 
 open_ios_simulator() {

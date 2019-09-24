@@ -1,8 +1,15 @@
 #!/bin/bash
-function addToPATH {
+function appendToPATH {
   case ":$PATH:" in
     *":$1:"*) :;; # already there
     *) PATH="$PATH:$1";; # or PATH="$PATH:$1"
+  esac
+}
+
+function prependToPATH {
+  case ":$PATH:" in
+    *":$1:"*) :;; # already there
+    *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
   esac
 }
 
@@ -18,23 +25,23 @@ if [[ ! "$EDITOR" ]]; then
 fi
 
 if [[ ! "$CUSTOM_NODE_PATH" ]]; then
-  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v10.16.1/bin"
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v10.16.3/bin"
 fi
 export NODE_PATH="$CUSTOM_NODE_PATH"
 
 export NVM_DIR="$HOME/.nvm"
 
-addToPATH "/usr/local/sbin"
+appendToPATH "/usr/local/sbin"
 
 # local -x
-addToPATH "$DOTFILES_ROOT/bin"
+appendToPATH "$DOTFILES_ROOT/bin"
 
 # node
-addToPATH "$NODE_PATH"
+appendToPATH "$NODE_PATH"
 
 # rbenv
-addToPATH "$HOME/.rbenv/bin"
-addToPATH "$HOME/.rbenv/shims"
+prependToPATH "$HOME/.rbenv/bin"
+prependToPATH "$HOME/.rbenv/shims"
 
 # bash-completion
 if [ -f "$DOTFILES_BREW_PREFIX/etc/bash_completion" ]; then
@@ -50,10 +57,10 @@ nvm() {
 }
 
 # Android Studio
-addToPATH "$ANDROID_HOME/emulator"
-addToPATH "$ANDROID_HOME/tools"
-addToPATH "$ANDROID_HOME/tools/bin"
-addToPATH "$ANDROID_HOME/platform-tools"
+appendToPATH "$ANDROID_HOME/emulator"
+appendToPATH "$ANDROID_HOME/tools"
+appendToPATH "$ANDROID_HOME/tools/bin"
+appendToPATH "$ANDROID_HOME/platform-tools"
 
 # GRC colorizes nifty unix tools all over the place
 if [ -f "$DOTFILES_BREW_PREFIX/bin/grc" ]; then

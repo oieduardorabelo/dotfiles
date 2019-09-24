@@ -5,20 +5,15 @@
 	],
 	"installed_packages":
 	[
-		"Babel",
 		"EditorConfig",
 		"Emmet",
 		"Git",
 		"GitGutter",
-		"HTML-CSS-JS Prettify",
 		"JsPrettier",
 		"Package Control",
-		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
-		"SublimeLinter-stylelint",
-		"SublimeLinter-tslint",
 		"SyncedSideBar",
 		"Theme - Solarized Flat",
 		"TypeScript"
