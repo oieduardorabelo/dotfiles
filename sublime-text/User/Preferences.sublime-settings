@@ -4,11 +4,14 @@
 	"auto_complete_cycle": true,
 	"auto_complete_with_fields": true,
 	"auto_find_in_selection": true,
+  "auto_format_on_save": true,
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
 	"caret_extra_top": 2,
 	"caret_extra_width": 1,
 	"caret_style": "blink",
+	"check_for_rbenv": true,
+	"check_for_rvm": false,
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/Solarized Flat Light (SL).tmTheme",
 	"draw_minimap_border": true,
@@ -36,7 +39,6 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"JavaScript",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -49,6 +51,7 @@
 	"line_padding_top": 6,
 	"match_brackets_angle": true,
 	"open_files_in_new_window": false,
+	"rbenv_path": "/usr/local/bin/rbenv",
 	"scroll_past_end": true,
 	"scroll_speed": 2,
 	"shift_tab_unindent": true,

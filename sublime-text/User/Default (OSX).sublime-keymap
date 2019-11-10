@@ -1,4 +1,11 @@
 [
   { "keys": ["super+b"], "command": "js_prettier" },
-  { "keys": ["ctrl+alt+w"], "command": "close_all" }
+  { "keys": ["ctrl+alt+w"], "command": "close_all" },
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  { "keys": ["super+shift+."], "command": "erb", "context":
+    [
+      { "key": "selector", "operator": "equal", "operand": "text.html.ruby, text.haml, source.yaml, source.css, source.scss, source.js, source.coffee" }
+    ]
+  }
 ]
