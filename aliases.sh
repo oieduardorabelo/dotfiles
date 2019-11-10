@@ -156,7 +156,7 @@ alias rnlios='react-native log-ios'
 docker_start() {
   docker-machine start default
   docker-machine env default
-  eval $(docker-machine env default)
+  eval "$(docker-machine env default)"
 }
 alias dr="docker"
 alias drc="docker-compose"
