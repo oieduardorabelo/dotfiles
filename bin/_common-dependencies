@@ -61,7 +61,7 @@ if test "$(command -v brew)"; then
   echo -e "
     Common ''brew'' dependencies:
 
-    bash, bat, git, grc, bash-completion, nvm,
+    bash, bat, git, grc, bash-completion, nvm, fd, ripgrep
     coreutils, diff-so-fancy, bash-git-prompt, yarn (without-node)
   "
   printf "  Would like to install common dependencies? [y/n] "
@@ -73,6 +73,8 @@ if test "$(command -v brew)"; then
       git \
       grc \
       bash-completion \
+      fd \
+      ripgrep \
       nvm \
       coreutils \
       diff-so-fancy \

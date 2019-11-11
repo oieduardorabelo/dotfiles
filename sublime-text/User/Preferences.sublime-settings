@@ -4,7 +4,7 @@
 	"auto_complete_cycle": true,
 	"auto_complete_with_fields": true,
 	"auto_find_in_selection": true,
-  "auto_format_on_save": true,
+	"auto_format_on_save": true,
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
 	"caret_extra_top": 2,
