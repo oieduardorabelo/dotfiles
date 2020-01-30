@@ -62,7 +62,7 @@ if test "$(command -v brew)"; then
     Common ''brew'' dependencies:
 
     bash, bat, git, grc, bash-completion, nvm, fd, ripgrep
-    coreutils, diff-so-fancy, bash-git-prompt, yarn (without-node)
+    coreutils, diff-so-fancy, bash-git-prompt
   "
   printf "  Would like to install common dependencies? [y/n] "
   read -r -e answer
@@ -79,7 +79,6 @@ if test "$(command -v brew)"; then
       coreutils \
       diff-so-fancy \
       bash-git-prompt|| true
-    brew install yarn --ignore-dependencies || true
   fi
 
   echo -e "
