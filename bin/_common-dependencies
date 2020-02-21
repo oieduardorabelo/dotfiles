@@ -89,7 +89,7 @@ if test "$(command -v brew)"; then
        webpquicklook suspicious-package quicklookase qlvideo
 
     Custom:
-     - font-fira-code itsycal alfred insomnia
+     - font-fira-code itsycal alfred
        sizeup 1password dash cleanmymac sublime-text visual-studio-code
   "
   printf "  Would like to install common dependencies? [y/n] "
@@ -102,7 +102,7 @@ if test "$(command -v brew)"; then
 
     echo "Installing custom list..."
     brew cask install homebrew/cask-fonts/font-fira-code \
-      itsycal alfred insomnia \
+      itsycal alfred \
       sizeup 1password dash cleanmymac sublime-text visual-studio-code
   fi
 fi
