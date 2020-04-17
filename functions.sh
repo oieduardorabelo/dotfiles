@@ -136,3 +136,10 @@ rr() {
 never_index_node_modules() {
   find . -type d -name "node_modules" -exec touch "{}/.metadata_never_index" \;
 }
+
+gen_ssh_key() {
+  if [[ ! $1 ]]; then
+    echo "Email is required."
+  fi
+  ssh-keygen -t rsa -b 4096 -C $1
+}
