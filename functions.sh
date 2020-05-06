@@ -85,6 +85,10 @@ nuke_logs() {
   find . -name "*.log" -type f -prune -exec rm -rf '{}' +
 }
 
+find_node_modules() {
+  find . -type d -name node_modules
+}
+
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
@@ -141,5 +145,9 @@ gen_ssh_key() {
   if [[ ! $1 ]]; then
     echo "Email is required."
   fi
-  ssh-keygen -t rsa -b 4096 -C $1
+  ssh-keygen -t rsa -b 4096 -C "$1"
+}
+
+get_role() {
+  eval $(assume-role $1)
 }
