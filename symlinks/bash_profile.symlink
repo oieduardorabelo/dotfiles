@@ -5,3 +5,9 @@
 if [ -f "$HOME/.dotfiles-locals.sh" ]; then
   . ~/.dotfiles-locals.sh
 fi
+
+reproduce () {
+  for i in {1..5}; do
+    $@ || return $?
+  done
+}
