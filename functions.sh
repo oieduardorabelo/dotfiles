@@ -149,5 +149,5 @@ gen_ssh_key() {
 }
 
 get_role() {
-  eval "$(assume-role $1)"
+  eval "$(assume-role "$1")"
 }
