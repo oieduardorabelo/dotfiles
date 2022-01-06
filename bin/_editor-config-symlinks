@@ -11,7 +11,7 @@ sublimeText() {
     read -r -e answer
 
     if [ "$answer" = "y" ]; then
-        cd "$ROOT/Library/Application Support/Sublime Text 3/Packages/" || return
+        cd "$ROOT/Library/Application Support/Sublime Text/Packages/" || return
         mv User User.bkp
         ln -s "$DOTFILES_ROOT/sublime-text/User" .
         echo -e "\\nFinished Sublime Text preferences update.\\n"

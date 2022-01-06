@@ -6,10 +6,12 @@
 	"installed_packages":
 	[
 		"DotENV",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
 		"Git",
 		"GitGutter",
+		"GraphQL",
 		"JsPrettier",
 		"Package Control",
 		"SideBarEnhancements",
@@ -19,5 +21,5 @@
 		"SyncedSideBar",
 		"Theme - Solarized Flat",
 		"TypeScript"
-	]
+	],
 }
