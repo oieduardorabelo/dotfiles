@@ -97,11 +97,11 @@ if test "$(command -v brew)"; then
 
   if [ "$answerCask" = "y" ]; then
      echo "Installing 'sindresorhus/quick-look-plugins' list..."
-     brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize \
+     brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize \
        webpquicklook suspicious-package quicklookase qlvideo
 
     echo "Installing custom list..."
-    brew cask install homebrew/cask-fonts/font-fira-code \
+    brew install --cask homebrew/cask-fonts/font-fira-code \
       itsycal alfred \
       sizeup 1password dash cleanmymac sublime-text visual-studio-code
   fi

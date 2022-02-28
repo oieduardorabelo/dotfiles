@@ -144,8 +144,10 @@ never_index_node_modules() {
 gen_ssh_key() {
   if [[ ! $1 ]]; then
     echo "Email is required."
+    echo "gen_ssh_key <email>"
+  else
+    ssh-keygen -t rsa -b 4096 -C "$1"
   fi
-  ssh-keygen -t rsa -b 4096 -C "$1"
 }
 
 get_role() {

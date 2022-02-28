@@ -1,4 +1,6 @@
 #!/bin/bash
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 function appendToPATH {
   case ":$PATH:" in
     *":$1:"*) :;; # already there
@@ -13,8 +15,10 @@ function prependToPATH {
   esac
 }
 
+prependToPATH "/opt/homebrew/bin"
+
 # env exports
-DOTFILES_BREW_PREFIX="$(brew --prefix)"
+DOTFILES_BREW_PREFIX="/opt/homebrew"
 export DOTFILES_BREW_PREFIX
 export BAT_THEME="OneHalfLight"
 export DOTFILES_ROOT="$HOME/.dotfiles"
@@ -65,7 +69,7 @@ appendToPATH "$ANDROID_HOME/platform-tools"
 # GRC colorizes nifty unix tools all over the place
 if [ -f "$DOTFILES_BREW_PREFIX/bin/grc" ]; then
   # shellcheck disable=SC1090,SC1091
-  . "$DOTFILES_BREW_PREFIX/etc/grc.bashrc"
+  . "$DOTFILES_BREW_PREFIX/etc/grc.sh"
 fi
 
 # shellcheck disable=SC1090,SC1091
