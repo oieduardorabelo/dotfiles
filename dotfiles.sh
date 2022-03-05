@@ -15,10 +15,8 @@ function prependToPATH {
   esac
 }
 
-prependToPATH "/opt/homebrew/bin"
-
 # env exports
-DOTFILES_BREW_PREFIX="/opt/homebrew"
+DOTFILES_BREW_PREFIX="$(brew --prefix)"
 export DOTFILES_BREW_PREFIX
 export BAT_THEME="OneHalfLight"
 export DOTFILES_ROOT="$HOME/.dotfiles"
