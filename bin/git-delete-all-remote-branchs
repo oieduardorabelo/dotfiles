@@ -1,4 +1,4 @@
 #!/bin/bash
-# Delete all remote branchs but master
+# Delete all remote branchs but main
 #
-git branch -r | grep -v "^.*master" | sed s:origin/:: | xargs -n 1 git push origin --delete
+git branch -r | grep -v "^.*main" | sed s:origin/:: | xargs -n 1 git push origin --delete

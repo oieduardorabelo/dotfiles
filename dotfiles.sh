@@ -16,8 +16,6 @@ function prependToPATH {
 }
 
 # env exports
-DOTFILES_BREW_PREFIX="$(brew --prefix)"
-export DOTFILES_BREW_PREFIX
 export BAT_THEME="OneHalfLight"
 export DOTFILES_ROOT="$HOME/.dotfiles"
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -46,15 +44,15 @@ prependToPATH "$HOME/.rbenv/bin"
 prependToPATH "$HOME/.rbenv/shims"
 
 # bash-completion
-if [ -f "$DOTFILES_BREW_PREFIX/etc/bash_completion" ]; then
+if [ -f "$HOMEBREW_PREFIX/etc/bash_completion" ]; then
   # shellcheck disable=SC1090,SC1091
-  . "$DOTFILES_BREW_PREFIX/etc/bash_completion"
+  . "$HOMEBREW_PREFIX/etc/bash_completion"
 fi
 
 nvm() {
-  if [ -f "$DOTFILES_BREW_PREFIX/opt/nvm/nvm.sh" ]; then
+  if [ -f "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]; then
     # shellcheck disable=SC1090,SC1091
-    . "$DOTFILES_BREW_PREFIX/opt/nvm/nvm.sh"
+    . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
   fi
 }
 
@@ -65,9 +63,9 @@ appendToPATH "$ANDROID_HOME/tools/bin"
 appendToPATH "$ANDROID_HOME/platform-tools"
 
 # GRC colorizes nifty unix tools all over the place
-if [ -f "$DOTFILES_BREW_PREFIX/bin/grc" ]; then
+if [ -f "$HOMEBREW_PREFIX/bin/grc" ]; then
   # shellcheck disable=SC1090,SC1091
-  . "$DOTFILES_BREW_PREFIX/etc/grc.sh"
+  . "$HOMEBREW_PREFIX/etc/grc.sh"
 fi
 
 # shellcheck disable=SC1090,SC1091

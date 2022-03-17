@@ -1,4 +1,4 @@
 #!/bin/bash
-# Delete all local branchs but master
+# Delete all local branchs but main
 #
-git branch | grep -v master | xargs git branch -D
+git branch | grep -v main | xargs git branch -D

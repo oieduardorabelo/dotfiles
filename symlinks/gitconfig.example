@@ -51,3 +51,6 @@
   submodule = log
 [commit]
   template = ~/.dotfiles/templates/git-commit.txt
+  gpgsign = true
+[init]
+  defaultBranch = main
