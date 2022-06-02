@@ -34,6 +34,10 @@ alias npo='npm outdated'
 alias npr='npm run'
 alias npt='npm init -y'
 alias npci='npm ci'
+alias npg='npm --location=global'
+alias npig='npm install --location=global'
+alias npog='npm outdated --location=global'
+alias nplg='npm ls --depth=0 --location=global'
 
 ## ########################################
 # ssh
