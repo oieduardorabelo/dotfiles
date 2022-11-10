@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # shellcheck source=/usr/local/opt/bash-git-prompt/share/gitprompt.sh
-if [ -f "$HOMEBREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [ -f "$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   export GIT_PROMPT_START=""
   export GIT_PROMPT_THEME=Solarized
   export __GIT_PROMPT_DIR
-  __GIT_PROMPT_DIR=$HOMEBREW_PREFIX/opt/bash-git-prompt/share
+  __GIT_PROMPT_DIR=$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share
   # shellcheck disable=SC1091
-  source "$HOMEBREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh"
+  source "$DOTFILES_BREW_PREFIX/opt/bash-git-prompt/share/gitprompt.sh"
 else
   #Prompt and prompt colors
   # 30m - Black
