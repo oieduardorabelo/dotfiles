@@ -3,7 +3,7 @@
 ## ########################################
 ## bat > cat
 ## ########################################
-alias cat='bat'
+alias cat='bat --paging=never'
 
 ## ########################################
 ## vim
@@ -38,6 +38,15 @@ alias npg='npm --location=global'
 alias npig='npm install --location=global'
 alias npog='npm outdated --location=global'
 alias nplg='npm ls --depth=0 --location=global'
+
+## ########################################
+## pnpm
+## ########################################
+alias pp='pnpm'
+alias ppi='pnpm install'
+alias ppa='pnpm add'
+alias ppo='pnpm outdated'
+
 
 ## ########################################
 # ssh
@@ -114,7 +123,8 @@ alias gcm='git commit -m'
 alias gca='git commit -a'
 alias gcam='git commit -a -m'
 alias gs='git status -sb'
-alias gcb='git copy-branch-name'
+alias gcb='git checkout -b'
+alias gcbn='git copy-branch-name'
 alias gm='git merge'
 
 ## ########################################
@@ -165,6 +175,7 @@ docker_start() {
 alias dr="docker"
 alias drc="docker-compose"
 alias drm="docker-machine"
+alias docker_run_pg="docker pull postgres && docker run --name pgdb -p 5455:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpw -e POSTGRES_DB=pgdb -d postgres"
 
 ## ########################################
 ## device simulators
@@ -176,3 +187,9 @@ open_android_emulator() {
 open_ios_simulator() {
   open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
 }
+
+## ########################################
+## kube
+## ########################################
+alias kbl="kubectl logs -f --tail=1000"
+alias kbrf="kubectl replace --force -f"

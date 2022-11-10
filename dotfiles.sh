@@ -25,7 +25,7 @@ if [[ ! "$EDITOR" ]]; then
 fi
 
 if [[ ! "$CUSTOM_NODE_PATH" ]]; then
-  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v16.15.1/bin"
+  CUSTOM_NODE_PATH="$HOME/.nvm/versions/node/v16.18.0/bin"
 fi
 export NODE_PATH="$CUSTOM_NODE_PATH"
 

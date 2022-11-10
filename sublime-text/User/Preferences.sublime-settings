@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
-	"auto_complete_commit_on_tab": true,
+	// "auto_complete_commit_on_tab": true,
 	"auto_complete_cycle": true,
 	"auto_complete_with_fields": true,
 	"auto_find_in_selection": true,
@@ -33,12 +33,13 @@
 		"no_bold",
 		"subpixel_antialias"
 	],
-	"font_size": 14,
+	"font_size": 18,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"TypeScript",
 		"Vintage",
 	],
 	"indent_guide_options":

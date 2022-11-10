@@ -2,17 +2,20 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"TypeScript",
 	],
 	"installed_packages":
 	[
-		"DotENV",
 		"Dockerfile Syntax Highlighting",
+		"DotENV",
 		"EditorConfig",
 		"Emmet",
+		"ESLint",
 		"Git",
 		"GitGutter",
 		"GraphQL",
 		"JsPrettier",
+		"MarkdownPreview",
 		"Package Control",
 		"SideBarEnhancements",
 		"SublimeERB",
@@ -20,6 +23,6 @@
 		"SublimeLinter-eslint",
 		"SyncedSideBar",
 		"Theme - Solarized Flat",
-		"TypeScript"
+		"TypeScript",
 	],
 }
